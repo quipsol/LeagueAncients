@@ -61,11 +61,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="LeagueAncientsCode\Core\Content\Ancients\" />
-        <Folder Include="LeagueAncientsCode\Core\Content\Cards\" />
-        <Folder Include="LeagueAncientsCode\Core\Content\Powers\" />
-        <Folder Include="LeagueAncientsCode\Core\Content\Relics\" />
         <Folder Include="LeagueAncients\images\card_portraits\big\"/>
+        <Folder Include="LeagueAncients\images\events\" />
         <Folder Include="LeagueAncients\images\powers\big\"/>
         <Folder Include="LeagueAncients\images\relics\big\"/>
     </ItemGroup>
