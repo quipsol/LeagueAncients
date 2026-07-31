@@ -11,13 +11,13 @@ namespace LeagueAncients.Core.Content.Ancients;
 
 public class Soraka : LeagueAncientsAncientModel
 {
-    // public override string? CustomMapIconPath => "res://SlayRuneterra/images/placeholder/100_100/purple.png";
-    // public override string? CustomMapIconOutlinePath => "res://SlayRuneterra/images/placeholder/150_150/black.png";
-    // public override string? CustomRunHistoryIconPath => "res://SlayRuneterra/images/placeholder/100_100/white.png";
-    // public override string? CustomRunHistoryIconOutlinePath => "res://SlayRuneterra/images/placeholder/150_150/black.png";
+    public override string? CustomMapIconPath => "res://LeagueAncients/images/placeholder/100_100/purple.png";
+    public override string? CustomMapIconOutlinePath => "res://LeagueAncients/images/placeholder/150_150/black.png";
+    public override string? CustomRunHistoryIconPath => "res://LeagueAncients/images/placeholder/100_100/white.png";
+    public override string? CustomRunHistoryIconOutlinePath => "res://LeagueAncients/images/placeholder/150_150/black.png";
 
     //public override string? CustomBackgroundScenePath => "res://SlayRuneterra/scenes/events/background_scenes/soraka.tscn";
-    
+    public override string? CustomScenePath => "res://LeagueAncients/scenes/events/background_scenes/soraka.tscn";
     public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
     public override Color DialogueColor => new Color("3C1931");
 

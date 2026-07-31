@@ -1,0 +1,61 @@
+{
+  "LEAGUEANCIENTS-REJUVENATION_BEAD.title": "Rejuvenation Bead",
+  "LEAGUEANCIENTS-REJUVENATION_BEAD.description": "The first time you enter a [gold]Rest Site[/gold], Heal to Max HP",
+  "LEAGUEANCIENTS-REJUVENATION_BEAD.flavor": "",
+
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION_RELIC.title": "Soraka's Compassion",
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION_RELIC.description": "Upon pickup, add [blue]1[/blue] [gold]Soraka's Compassion[/gold] into your deck and enchant it with [gold]Potential[/gold] [blue]1[/blue]",
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION_RELIC.eventDescription": "Add [blue]1[/blue] [gold]Soraka's Compassion[/gold] into your deck and enchant it with [gold]Potential[/gold] [blue]1[/blue]",
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION_RELIC.flavor": "",
+
+  "LEAGUEANCIENTS-TIME_CAPSULE.title": "Time Capsule",
+  "LEAGUEANCIENTS-TIME_CAPSULE.description": "Upon pickup, remove [blue]2[/blue] [red]Strike[/red] and [green]Defend[/green] from your deck.\nAfter each [gold]Elite[/gold] or [gold]Boss[/gold] combat, randomly add [blue]1[/blue] back.{CardTitles.StringValue:cond:\\n\\nCards in Stasis:\\n{}|}",
+  "LEAGUEANCIENTS-TIME_CAPSULE.eventDescription": "Remove [blue]2[/blue] [red]Strike[/red] and [green]Defend[/green] from your deck. After each [gold]Elite[/gold] or [gold]Boss[/gold] combat, randomly add [blue]1[/blue] back.{CardTitles.StringValue:cond:\\n\\nCards in Stasis:\\n{}|}",
+  "LEAGUEANCIENTS-TIME_CAPSULE.flavor": "",
+
+
+
+
+  "LEAGUEANCIENTS-FLAIL_OF_JUSTICE.title": "Flail of Judgement",
+  "LEAGUEANCIENTS-FLAIL_OF_JUSTICE.description": "After you break an enemies [gold]Block[/gold], apply [blue]{WeakPower:diff()}[/blue] [gold]Weak[/gold] and [blue]{VulnerablePower:diff()}[/blue] [gold]Vulnerable[/gold].",
+  "LEAGUEANCIENTS-FLAIL_OF_JUSTICE.flavor": "",
+
+  "LEAGUEANCIENTS-SPEAR_OF_JUSTICE.title": "Spear of Justice",
+  "LEAGUEANCIENTS-SPEAR_OF_JUSTICE.description": "At the beginning of combat gain [gold]Vigor[/gold] equal to twice the amount of [gold]Relics[/gold] you have.{IsEvent: ([blue]{CalculatedVigor:diff()}[/blue])|{HasOwner:\n\nGrants [blue]{CalculatedVigor:diff()}[/blue] [gold]Vigor[/gold].|}}",
+  "LEAGUEANCIENTS-SPEAR_OF_JUSTICE.flavor": "",
+
+  "LEAGUEANCIENTS-SWORD_OF_JUSTICE.title": "Sword Of Justice",
+  "LEAGUEANCIENTS-SWORD_OF_JUSTICE.description": "Whenever you play an [red]Attack[/red] gain {SwordOfJusticeStrengthPower:diff()} Strength until the end of your turn.",
+  "LEAGUEANCIENTS-SWORD_OF_JUSTICE.flavor": "",
+
+  "LEAGUEANCIENTS-RING_OF_CARNAGE.title": "Ring of Carnage",
+  "LEAGUEANCIENTS-RING_OF_CARNAGE.description": "If you only played [red]attacks[/red] this turn, gain {energyPrefix:energyIcons(1)} at the start of next turn.",
+  "LEAGUEANCIENTS-RING_OF_CARNAGE.flavor": "",
+
+  "LEAGUEANCIENTS-DIVINE_IDOL.title": "Divine Idol",
+  "LEAGUEANCIENTS-DIVINE_IDOL.description": "Upon pickup, add {InRun:[blue]1[/blue] [gold]{IsMultiplayer:Greater |}Divine Intervention[/gold]|an [gold]Intervention[/gold]} to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-DIVINE_IDOL.flavor": "",
+
+  "LEAGUEANCIENTS-DIVINE_FEATHER.title": "Divine Feather",
+  "LEAGUEANCIENTS-DIVINE_FEATHER.description": "Upon pickup, add [blue]1[/blue] [gold]Celestial Blessing[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-DIVINE_FEATHER.flavor": "",
+
+  "LEAGUEANCIENTS-DIVINE_HELMET.title": "Divine Helmet",
+  "LEAGUEANCIENTS-DIVINE_HELMET.description": "During combat you can not lose more than [blue]{DamageCap:diff()}[/blue] HP at once.",
+  "LEAGUEANCIENTS-DIVINE_HELMET.flavor": "",
+
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.title": "Essence of an Angel",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.flavor": "",
+
+
+
+  "LEAGUEANCIENTS-MILLENNIUM_EGG.description": "Upon pickup, [gold]Transform[/gold] {StarterCard.StringValue:cond:[gold]{StarterCard}[/gold] into [gold]{AncientCard}[/gold]|a starter card into an ancient version}.",
+  "LEAGUEANCIENTS-MILLENNIUM_EGG.eventDescription": "[gold]Transform[/gold] {StarterCard.StringValue:cond:[gold]{StarterCard}[/gold] into [gold]{AncientCard}[/gold]|a starter card into an ancient version}.",
+  "LEAGUEANCIENTS-MILLENNIUM_EGG.flavor": "Test",
+  "LEAGUEANCIENTS-MILLENNIUM_EGG.title": "Millennium Egg",
+
+  "LEAGUEANCIENTS-EMPTY.title": "",
+  "LEAGUEANCIENTS-EMPTY.description": "",
+  "LEAGUEANCIENTS-EMPTY.flavor": ""
+}

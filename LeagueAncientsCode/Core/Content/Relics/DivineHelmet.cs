@@ -20,7 +20,7 @@ public class DivineHelmet : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new ("DamageCap", 5)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new ("DamageCap", 8)];
 
     public override Decimal ModifyHpLostAfterOsty(Creature target, Decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
     {

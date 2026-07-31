@@ -26,7 +26,7 @@ public class SpearOfJustice : LeagueAncientsRelicModel
     [
                 new CalculationBaseVar(0M),
                 new CalculationExtraVar(1M),
-                new CalculatedRelicVar("CalculatedVigor").WithMultiplier(relic => relic.Owner.Relics.Count * 2)
+                new CalculatedRelicVar("CalculatedVigor").WithMultiplier(relic => relic.Owner.Relics.Count * 3)
     ];
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)

@@ -28,7 +28,7 @@ public class RingOfCarnage : LeagueAncientsRelicModel
 
     public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
-        if (cardPlay.Card.Owner != this.Owner || cardPlay.Card.Type == CardType.Attack)
+        if (cardPlay.Card.Owner != Owner || cardPlay.Card.Type == CardType.Attack)
             return Task.CompletedTask;
         _extraEnergy = false;
         return Task.CompletedTask;

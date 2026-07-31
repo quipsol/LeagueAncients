@@ -1,0 +1,12 @@
+{
+  "LEAGUEANCIENTS-CELESTIAL_BLESSING.title": "Celestial Blessing",
+  "LEAGUEANCIENTS-CELESTIAL_BLESSING.description": "Heal {Heal:diff()} HP.\nDraw {Cards:diff()} cards.",
+  "LEAGUEANCIENTS-DIVINE_INTERVENTION.title": "Divine Intervention",
+  "LEAGUEANCIENTS-DIVINE_INTERVENTION.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nAt the beginning of your next turn, deal {DivineInterventionPower:diff()} damage to ALL enemies.",
+  "LEAGUEANCIENTS-GREATER_DIVINE_INTERVENTION.title": "Greater Divine Intervention",
+  "LEAGUEANCIENTS-GREATER_DIVINE_INTERVENTION.description": "ALL allies gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nAt the beginning of your next turn, deal {DivineInterventionPower:diff()} damage to ALL enemies.",
+  
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION.title": "Soraka's Compassion",
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION.description": "Heal {HpVar:diff()} HP"
+  
+}
