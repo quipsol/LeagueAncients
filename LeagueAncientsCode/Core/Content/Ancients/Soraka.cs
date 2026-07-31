@@ -11,10 +11,10 @@ namespace LeagueAncients.Core.Content.Ancients;
 
 public class Soraka : LeagueAncientsAncientModel
 {
-    public override string? CustomMapIconPath => "res://SlayRuneterra/images/placeholder/100_100/purple.png";
-    public override string? CustomMapIconOutlinePath => "res://SlayRuneterra/images/placeholder/150_150/black.png";
-    public override string? CustomRunHistoryIconPath => "res://SlayRuneterra/images/placeholder/100_100/white.png";
-    public override string? CustomRunHistoryIconOutlinePath => "res://SlayRuneterra/images/placeholder/150_150/black.png";
+    // public override string? CustomMapIconPath => "res://SlayRuneterra/images/placeholder/100_100/purple.png";
+    // public override string? CustomMapIconOutlinePath => "res://SlayRuneterra/images/placeholder/150_150/black.png";
+    // public override string? CustomRunHistoryIconPath => "res://SlayRuneterra/images/placeholder/100_100/white.png";
+    // public override string? CustomRunHistoryIconOutlinePath => "res://SlayRuneterra/images/placeholder/150_150/black.png";
 
     //public override string? CustomBackgroundScenePath => "res://SlayRuneterra/scenes/events/background_scenes/soraka.tscn";
     

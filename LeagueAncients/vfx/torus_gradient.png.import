@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cte6flgh03t8u"
-path="res://.godot/imported/sand_cloud.png-f2aea55572f3900e27e6e4b71dfc956b.ctex"
+uid="uid://delvorbx8nfs"
+path="res://.godot/imported/torus_gradient.png-0da64ce6c1eeb8dea333921a2a94b5cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LeagueAncients/vfx/monsters/the_insatiable/sand_cloud.png"
-dest_files=["res://.godot/imported/sand_cloud.png-f2aea55572f3900e27e6e4b71dfc956b.ctex"]
+source_file="res://LeagueAncients/vfx/torus_gradient.png"
+dest_files=["res://.godot/imported/torus_gradient.png-0da64ce6c1eeb8dea333921a2a94b5cb.ctex"]
 
 [params]
 

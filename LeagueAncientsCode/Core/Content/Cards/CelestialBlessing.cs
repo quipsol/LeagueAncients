@@ -13,9 +13,9 @@ namespace LeagueAncients.Core.Content.Cards;
 [Pool(typeof(ColorlessCardPool))]
 public class CelestialBlessing() : LeagueAncientsCardModel(1, CardType.Skill, CardRarity.Ancient, TargetType.Self)
 {
-    public override string BetaPortraitPath => "res://SlayRuneterra/images/card_portraits/colorless_ancient_placeholder.png";
-    public override string PortraitPath => "res://SlayRuneterra/images/card_portraits/colorless_ancient_placeholder.png";
-    public override string CustomPortraitPath => "res://SlayRuneterra/images/card_portraits/colorless_ancient_placeholder.png";
+    public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    public override string PortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    public override string CustomPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
     
     protected override IEnumerable<DynamicVar> CanonicalVars => 
     [

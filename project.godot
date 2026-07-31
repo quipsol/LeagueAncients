@@ -14,6 +14,10 @@ config/name="LeagueAncients"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
 config/icon="res://LeagueAncients/mod_image.png"
 
+[debug]
+
+settings/gdscript/always_track_call_stacks=true
+
 [display]
 
 window/size/viewport_width=1920
@@ -30,3 +34,7 @@ project/assembly_name="LeagueAncients"
 
 renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0.0923724, 0.122398, 0.116929, 1)
+
+[sentry]
+
+schema_version=4

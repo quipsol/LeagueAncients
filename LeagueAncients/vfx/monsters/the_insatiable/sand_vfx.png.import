@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t2tj7624vblt"
-path="res://.godot/imported/sand_vfx.png-f73c24a77d32f20827f3f240728a6620.ctex"
+path="res://.godot/imported/sand_vfx.png-2c90c218d5b143c9a29fa71f637f3ae7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SlayRuneterra/images/vfx/monsters/the_insatiable/sand_vfx.png"
-dest_files=["res://.godot/imported/sand_vfx.png-f73c24a77d32f20827f3f240728a6620.ctex"]
+source_file="res://LeagueAncients/vfx/monsters/the_insatiable/sand_vfx.png"
+dest_files=["res://.godot/imported/sand_vfx.png-2c90c218d5b143c9a29fa71f637f3ae7.ctex"]
 
 [params]
 

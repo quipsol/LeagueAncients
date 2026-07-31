@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cte6flgh03t8u"
-path="res://.godot/imported/sand_cloud.png-f2aea55572f3900e27e6e4b71dfc956b.ctex"
+uid="uid://ethpr42do5yf"
+path="res://.godot/imported/small_star.png-0e9879548a85369de75b09af464ea558.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LeagueAncients/vfx/monsters/the_insatiable/sand_cloud.png"
-dest_files=["res://.godot/imported/sand_cloud.png-f2aea55572f3900e27e6e4b71dfc956b.ctex"]
+source_file="res://LeagueAncients/vfx/small_star.png"
+dest_files=["res://.godot/imported/small_star.png-0e9879548a85369de75b09af464ea558.ctex"]
 
 [params]
 
