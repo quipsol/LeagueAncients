@@ -17,16 +17,16 @@ local.props
 **/BaseLib.dll
 
 
-addons/
-animations/
-banks/
-debug_audio/
-fonts/
-images/
-localization/
-materials/
-models/
-scenes/
-shaders/
-src/
-themes/
+/addons/
+/animations/
+/banks/
+/debug_audio/
+/fonts/
+/images/
+/localization/
+/materials/
+/models/
+/scenes/
+/shaders/
+/src/
+/themes/
