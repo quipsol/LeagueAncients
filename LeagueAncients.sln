@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueAncients", "LeagueAncients.csproj", "{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{CEE26DBB-975D-4185-AC77-AA51EF84C0C6}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
