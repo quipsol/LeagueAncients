@@ -32,6 +32,14 @@
   "LEAGUEANCIENTS-RING_OF_CARNAGE.description": "If you only played [red]attacks[/red] this turn, gain {energyPrefix:energyIcons(1)} at the start of next turn.",
   "LEAGUEANCIENTS-RING_OF_CARNAGE.flavor": "",
 
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.title": "Essence of an Angel",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.flavor": "",
+  
+  "LEAGUEANCIENTS-GUIDING_LIGHT.title": "Guiding Light",
+  "LEAGUEANCIENTS-GUIDING_LIGHT.description": "The first [red]Attack[/red] you play each turn costs {energyPrefix:energyIcons(1)} less.",
+  "LEAGUEANCIENTS-GUIDING_LIGHT.flavor": "",
+  
   "LEAGUEANCIENTS-DIVINE_IDOL.title": "Divine Idol",
   "LEAGUEANCIENTS-DIVINE_IDOL.description": "Upon pickup, add {InRun:[blue]1[/blue] [gold]{IsMultiplayer:Greater |}Divine Intervention[/gold]|an [gold]Intervention[/gold]} to your [gold]Deck[/gold].",
   "LEAGUEANCIENTS-DIVINE_IDOL.flavor": "",
@@ -43,10 +51,6 @@
   "LEAGUEANCIENTS-DIVINE_HELMET.title": "Divine Helmet",
   "LEAGUEANCIENTS-DIVINE_HELMET.description": "During combat you can not lose more than [blue]{DamageCap:diff()}[/blue] HP at once.",
   "LEAGUEANCIENTS-DIVINE_HELMET.flavor": "",
-
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.title": "Essence of an Angel",
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.flavor": "",
 
 
 
