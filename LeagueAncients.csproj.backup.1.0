@@ -55,5 +55,4 @@
               IgnoreExitCode="true"
               IgnoreStandardErrorWarningFormat="true"/>
     </Target>
-    <Import Project="addons/sentry/dotnet/Sentry.Godot.props" Condition="Exists('addons/sentry/dotnet/Sentry.Godot.props')" />
 </Project>

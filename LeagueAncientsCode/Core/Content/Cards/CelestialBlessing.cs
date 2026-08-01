@@ -19,7 +19,7 @@ public class CelestialBlessing() : LeagueAncientsCardModel(1, CardType.Skill, Ca
     
     protected override IEnumerable<DynamicVar> CanonicalVars => 
     [
-                new HealVar(5),
+                new HealVar(2),
                 new CardsVar(2)
     ];
 
@@ -34,7 +34,7 @@ public class CelestialBlessing() : LeagueAncientsCardModel(1, CardType.Skill, Ca
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Heal.UpgradeValueBy(2);
+        DynamicVars.Heal.UpgradeValueBy(1);
         DynamicVars.Cards.UpgradeValueBy(1);
     }
 }

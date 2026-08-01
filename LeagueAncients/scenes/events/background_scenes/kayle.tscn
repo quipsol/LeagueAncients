@@ -1,12 +1,12 @@
-[gd_scene load_steps=26 format=3 uid="uid://ctvp3ymno6232"]
+[gd_scene load_steps=26 format=3 ]
 
-[ext_resource type="Texture2D" uid="uid://w8pdx1korpfx" path="res://LeagueAncients/images/ancients/kayle_splashart.png" id="1_6o6sx"]
-[ext_resource type="Texture2D" uid="uid://gvoysorwhaiq" path="res://images/vfx/monsters/the_insatiable/sand_cloud.png" id="2_3n6ce"]
-[ext_resource type="Texture2D" uid="uid://ethpr42do5yf" path="res://LeagueAncients/vfx/small_star.png" id="3_vvc8j"]
-[ext_resource type="Texture2D" uid="uid://mi366okwgqpv" path="res://LeagueAncients/vfx/circle_gradient.png" id="4_b8dfr"]
-[ext_resource type="Shader" uid="uid://qobk3bqdi07e" path="res://LeagueAncients/shaders/vfx/vfx_water_reflection_post.gdshader" id="5_dcdob"]
-[ext_resource type="Texture2D" uid="uid://c3c8jwaa1jn30" path="res://LeagueAncients/images/placeholder/100_100/white.png" id="6_dcdob"]
-[ext_resource type="Texture2D" uid="uid://delvorbx8nfs" path="res://LeagueAncients/vfx/torus_gradient.png" id="6_vvc8j"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/images/ancients/kayle_splashart.png" id="1_6o6sx"]
+[ext_resource type="Texture2D" path="res://images/vfx/monsters/the_insatiable/sand_cloud.png" id="2_3n6ce"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/vfx/small_star.png" id="3_vvc8j"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/vfx/circle_gradient.png" id="4_b8dfr"]
+[ext_resource type="Shader" path="res://LeagueAncients/shaders/vfx/vfx_water_reflection_post.gdshader" id="5_dcdob"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/images/placeholder/100_100/white.png" id="6_dcdob"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/vfx/torus_gradient.png" id="6_vvc8j"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_20ph4"]
 blend_mode = 1

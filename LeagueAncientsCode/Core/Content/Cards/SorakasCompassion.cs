@@ -32,6 +32,6 @@ public class SorakasCompassion() : LeagueAncientsCardModel(1, CardType.Skill, Ca
 
     protected override void OnUpgrade()
     {
-        DynamicVars["HpVar"].UpgradeValueBy(3);
+        DynamicVars["HpVar"].UpgradeValueBy(2);
     }
 }
