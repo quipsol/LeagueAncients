@@ -1,5 +1,10 @@
 {
   "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.title": "Divine Intervention",
   "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.description": "At the beginning of your turn, deal damage to ALL enemies",
-  "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.smartDescription": "At the beginning of your turn, deal [blue]{Amount}[/blue] damage to ALL enemies."
+  "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.smartDescription": "At the beginning of your turn, deal [blue]{Amount}[/blue] damage to ALL enemies.",
+
+  "LEAGUEANCIENTS-TEST_POWER.title": "Test Power",
+  "LEAGUEANCIENTS-TEST_POWER.description": "TEST",
+  "LEAGUEANCIENTS-TEST_POWER.smartDescription": "TEST smart"
+  
 }

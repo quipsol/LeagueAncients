@@ -32,9 +32,9 @@
   "LEAGUEANCIENTS-RING_OF_CARNAGE.description": "If you only played [red]attacks[/red] this turn, gain {energyPrefix:energyIcons(1)} at the start of next turn.",
   "LEAGUEANCIENTS-RING_OF_CARNAGE.flavor": "",
 
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.title": "Essence of an Angel",
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL.flavor": "",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.title": "Essence of an Angel",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.flavor": "",
   
   "LEAGUEANCIENTS-GUIDING_LIGHT.title": "Guiding Light",
   "LEAGUEANCIENTS-GUIDING_LIGHT.description": "The first [red]Attack[/red] you play each turn costs {energyPrefix:energyIcons(1)} less.",
@@ -53,11 +53,15 @@
   "LEAGUEANCIENTS-DIVINE_HELMET.flavor": "",
 
 
-
-  "LEAGUEANCIENTS-MILLENNIUM_EGG.description": "Upon pickup, [gold]Transform[/gold] {StarterCard.StringValue:cond:[gold]{StarterCard}[/gold] into [gold]{AncientCard}[/gold]|a starter card into an ancient version}.",
-  "LEAGUEANCIENTS-MILLENNIUM_EGG.eventDescription": "[gold]Transform[/gold] {StarterCard.StringValue:cond:[gold]{StarterCard}[/gold] into [gold]{AncientCard}[/gold]|a starter card into an ancient version}.",
-  "LEAGUEANCIENTS-MILLENNIUM_EGG.flavor": "Test",
-  "LEAGUEANCIENTS-MILLENNIUM_EGG.title": "Millennium Egg",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.title": "Essence of an Angel",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.flavor": "",
+  "LEAGUEANCIENTS-BLACK_SHIELD.title": "Black Shield",
+  "LEAGUEANCIENTS-BLACK_SHIELD.description": "Start each combat with [blue]{ArtifactPower}[/blue] [gold]Artifact[/gold].",
+  "LEAGUEANCIENTS-BLACK_SHIELD.flavor": "",
+  "LEAGUEANCIENTS-SOUL_SHACKLES_RELIC.title": "Soul Shackles",
+  "LEAGUEANCIENTS-SOUL_SHACKLES_RELIC.description": "Obtain the other two offers. Become cursed with [red]Soul Shackles[/red].",
+  "LEAGUEANCIENTS-SOUL_SHACKLES_RELIC.flavor": "",
 
   "LEAGUEANCIENTS-EMPTY.title": "",
   "LEAGUEANCIENTS-EMPTY.description": "",

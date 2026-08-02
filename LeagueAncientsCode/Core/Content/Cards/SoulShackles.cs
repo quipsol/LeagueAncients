@@ -3,35 +3,31 @@ using LeagueAncients.Core.Models;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace LeagueAncients.Core.Content.Cards;
 
-[Pool(typeof(ColorlessCardPool))]
-public class SorakasCompassion() : LeagueAncientsCardModel(1, CardType.Skill, CardRarity.Ancient, TargetType.Self)
+
+[Pool(typeof(CurseCardPool))]
+public class SoulShackles() : LeagueAncientsCardModel(-1, CardType.Curse, CardRarity.Ancient, TargetType.Self)
 {
     public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
     public override string PortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
     public override string CustomPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
 
-    protected override IEnumerable<DynamicVar> CanonicalVars =>
-    [
-                new DynamicVar("HpVar", 3)
-    ];
+    public override int MaxUpgradeLevel => 0;
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal, CardKeyword.Exhaust];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];
     
-
-    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Unplayable, CardKeyword.Eternal];
+    
+    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
-        await CreatureCmd.Heal(Owner.Creature, DynamicVars["HpVar"].BaseValue);
+        if (card != this) return;
+        await Cmd.Wait(0.25f); 
+        await PlayerCmd.LoseEnergy(DynamicVars.Energy.IntValue, Owner);
     }
-
-    protected override void OnUpgrade()
-    {
-        DynamicVars["HpVar"].UpgradeValueBy(2);
-    }
+    
 }

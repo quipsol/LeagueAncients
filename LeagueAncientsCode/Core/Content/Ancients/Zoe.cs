@@ -58,30 +58,77 @@ public class Zoe : LeagueAncientsAncientModel
     ];
     
  
-    protected override OptionPools MakeOptionPools => new(
-                MakePool(
-                            AncientOption<Orrery>(),
-                            AncientOption<PrismaticGem>(),
-                            AncientOption<SeaGlass>(relicPrep: (glass) => //An example of a relic that requires setup.
-                            {
-                                if (Owner == null) return glass;
-                                var character = Owner.Character;
-                                var characterModel = Rng.NextItem(Owner.UnlockState.Characters.Where((Func<CharacterModel, bool>) (c => c.Id != character.Id))) ?? character;
-                                glass.CharacterId = characterModel.Id;
-                                return glass;
-                            })
-                ),
-                MakePool( //Options can be assigned weight to change their appearance rates. Clone is a bit rarer, for example.
-                            AncientOption<Astrolabe>(weight: 10),
-                            AncientOption<Driftwood>(weight: 90)
-                ),
-                MakePool(
-                            AncientOption<CharonsAshes>(),
-                            AncientOption<OrangeDough>(),
-                            AncientOption<PowerCell>(),
-                            AncientOption<PaperKrane>(),
-                            AncientOption<BigHat>()
-                ));
+    // protected override OptionPools MakeOptionPools => new(
+    //             MakePool(
+    //                         AncientOption<Orrery>(),
+    //                         AncientOption<PrismaticGem>(),
+    //                         AncientOption<SeaGlass>(relicPrep: (glass) => //An example of a relic that requires setup.
+    //                         {
+    //                             if (Owner == null) return glass;
+    //                             var character = Owner.Character;
+    //                             var characterModel = Rng.NextItem(Owner.UnlockState.Characters.Where(c => c.Id != character.Id)) ?? character;
+    //                             glass.CharacterId = characterModel.Id;
+    //                             return glass;
+    //                         })
+    //             ),
+    //             MakePool( //Options can be assigned weight to change their appearance rates. Clone is a bit rarer, for example.
+    //                         AncientOption<Astrolabe>(weight: 10),
+    //                         AncientOption<Driftwood>(weight: 90)
+    //             ),
+    //             MakePool(
+    //                         AncientOption<CharonsAshes>(),
+    //                         AncientOption<OrangeDough>(),
+    //                         AncientOption<PowerCell>(),
+    //                         AncientOption<PaperKrane>(),
+    //                         AncientOption<BigHat>()
+    //             ));
+    //
+    public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3, ..SeaGlassOptions];
+
+    private IEnumerable<EventOption> OptionPool1 => [
+                RelicOption<Orrery>(),
+                RelicOption<PrismaticGem>(),
+    ];
+    private IEnumerable<EventOption> OptionPool2 => [
+                RelicOption<Astrolabe>(),
+                RelicOption<Driftwood>(),
+    ];
+    private IEnumerable<EventOption> OptionPool3 => [
+                RelicOption<CharonsAshes>(),
+                RelicOption<OrangeDough>(),
+                RelicOption<PowerCell>(),
+                RelicOption<PaperKrane>(),
+                RelicOption<BigHat>(),
+    ];
     
+    private IEnumerable<EventOption> SeaGlassOptions
+    {
+        get
+        {
+           var list = new List<EventOption>();
+            foreach (var characterModel in ModelDb.AllCharacters)
+            {
+                var seaGlass = (SeaGlass)ModelDb.Relic<SeaGlass>().ToMutable();
+                seaGlass.CharacterId = characterModel.Id;
+                list.Add(RelicOption(seaGlass));
+            }
+            return list;
+        }
+    }
     
+    protected override IReadOnlyList<EventOption> GenerateInitialEventOptions()
+    {
+        var ownerCharacterModel = Owner!.Character;
+        var characterModel = Rng.NextItem(Owner.UnlockState.Characters.Where(c => c.Id != ownerCharacterModel.Id)) ?? ownerCharacterModel;
+        var list = OptionPool1.ToList();
+        var seaGlass = (SeaGlass)ModelDb.Relic<SeaGlass>().ToMutable();
+        seaGlass.CharacterId = characterModel.Id;
+        list.Add(RelicOption(seaGlass));
+        return 
+        [
+                    Rng.NextItem(list)!,
+                    Rng.NextItem(OptionPool2)!,
+                    Rng.NextItem(OptionPool3)!,
+        ];
+    }
 }

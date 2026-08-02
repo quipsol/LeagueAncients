@@ -148,11 +148,13 @@
   "LEAGUEANCIENTS-MORGANA.title": "Morgana",
   "LEAGUEANCIENTS-MORGANA.epithet": "The Fallen",
   "LEAGUEANCIENTS-MORGANA.talk.firstVisitEver.0-0.ancient": "First time greeting.",
+  
   "LEAGUEANCIENTS-MORGANA.talk.ANY.0-0r.ancient": "Any greeting one.",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.1-0r.ancient": "Any greeting two?",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-0.ancient": "Imagine seeing [sine]you[/sine] again after so long.",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-0.next": "Awaken",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-1.char": "[jitter][b]SACRED DEMON![/b][/jitter]\nWhat have you done to me!?",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-1.next": "Continue",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-2.ancient": "Exactly what you bargained for."
+  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-0r.next": "Awaken",
+  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-1r.char": "[jitter][b]SACRED DEMON![/b][/jitter]\nWhat have you done to me!?",
+  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-1r.next": "Continue",
+  "LEAGUEANCIENTS-MORGANA.talk.ANY.0-2r.ancient": "Exactly what you bargained for.",
+  "LEAGUEANCIENTS-MORGANA.talk.ANY.1-0r.ancient": "Any greeting two?"
+  
+  
 }

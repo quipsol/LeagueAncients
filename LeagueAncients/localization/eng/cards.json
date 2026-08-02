@@ -7,6 +7,13 @@
   "LEAGUEANCIENTS-GREATER_DIVINE_INTERVENTION.description": "ALL allies gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nAt the beginning of your next turn, deal {DivineInterventionPower:diff()} damage to ALL enemies.",
   
   "LEAGUEANCIENTS-SORAKAS_COMPASSION.title": "Soraka's Compassion",
-  "LEAGUEANCIENTS-SORAKAS_COMPASSION.description": "Heal {HpVar:diff()} HP"
+  "LEAGUEANCIENTS-SORAKAS_COMPASSION.description": "Heal {HpVar:diff()} HP",
+  "LEAGUEANCIENTS-SOUL_SHACKLES.title": "Soul Shackles",
+  "LEAGUEANCIENTS-SOUL_SHACKLES.description": "Whenever you draw this card, lose {energyPrefix:energyIcons(1)}.",
+  "LEAGUEANCIENTS-ACHIEVE_DIVINITY_KAYLE.title": "Achieve Divinity",
+  "LEAGUEANCIENTS-ACHIEVE_DIVINITY_KAYLE.description": "[gold]Upgrade[/gold] ALL your [red]Attack[/red]{IfUpgraded:show: and [blue]Power[/blue]|} cards.",
+  "LEAGUEANCIENTS-ACHIEVE_DIVINITY_MORGANA.title": "Achieve Divinity",
+  "LEAGUEANCIENTS-ACHIEVE_DIVINITY_MORGANA.description": "[gold]Upgrade[/gold] ALL your [green]Skill[/green]{IfUpgraded:show: and [blue]Power[/blue]|} cards."
+  
   
 }
