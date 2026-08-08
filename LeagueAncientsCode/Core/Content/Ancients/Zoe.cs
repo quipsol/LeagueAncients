@@ -50,35 +50,14 @@ public class Zoe : LeagueAncientsAncientModel
 
     //public override string? CustomBackgroundScenePath => "res://SlayRuneterra/scenes/events/background_scenes/zoe.tscn";
     public override string CustomScenePath => "res://LeagueAncients/scenes/events/background_scenes/zoe.tscn";
-    public override bool IsValidForAct(ActModel act) => false;//SlayRuneterraConfig.IsEnabled;
+    
+    public override bool IsValidForAct(ActModel act) => !Config.DisableLeagueAncients && act.Index is 1 or 2;
 
 
     
     public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
 
     public override Color DialogueColor => new Color("3C1931");
-    
-    private IEnumerable<EventOption> Pool1 => 
-    [
-                RelicOption<BloodSoakedRose>(),
-                RelicOption<WhisperingEarring>(),
-                RelicOption<Fiddle>()
-    ];
-
-    private IEnumerable<EventOption> Pool2 =>
-    [
-                RelicOption<PreservedFog>(),
-                RelicOption<SereTalon>(),
-                RelicOption<DistinguishedCape>().ThatDecreasesMaxHp(9m)
-    ];
-
-    private IEnumerable<EventOption> Pool3 =>
-    [
-                RelicOption<ChoicesParadox>(),
-                RelicOption<MusicBox>(),
-                RelicOption<LordsParasol>(),
-                RelicOption<JeweledMask>()
-    ];
     
     
     public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3, ..SeaGlassOptions];

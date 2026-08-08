@@ -17,9 +17,8 @@ public class Morgana : LeagueAncientsAncientModel
 
     public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
     public override Color DialogueColor => new Color("3C1931");
-    public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3];
 
-    public override bool IsValidForAct(ActModel act) => act.Index == 1;
+    public override bool IsValidForAct(ActModel act) => !Config.DisableLeagueAncients && act.Index == 1;
 
     /*
      Relics:
@@ -34,6 +33,8 @@ public class Morgana : LeagueAncientsAncientModel
       - <Desperate Bargain> Upon reaching the boss, obtain the other two offered relics (how to handle giving relics outside of rooms!?)
       - <Soul Shackles> Obtain the other two offered relics, get cursed with Shackles -> Unplayable, Eternal, when drawn lose 1 Energy.
      */
+    
+    public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3];
     
     private IEnumerable<EventOption> OptionPool1 => [
                 RelicOption<EssenceOfAnAngelMorgana>(),

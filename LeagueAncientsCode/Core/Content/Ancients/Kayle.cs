@@ -19,7 +19,8 @@ public class Kayle : LeagueAncientsAncientModel
 	public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
 	public override Color DialogueColor => new Color("3C1931");
 
-	public override bool IsValidForAct(ActModel act) => act.Index == 1;
+	public override bool IsValidForAct(ActModel act) => !Config.DisableLeagueAncients && act.Index == 1;
+	
 	
 /*
 	- <Zenith> While you are at or above 70% health, gain 3 Strength and Dexterity.

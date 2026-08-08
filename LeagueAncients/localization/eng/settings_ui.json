@@ -1,3 +1,10 @@
 {
-  "LEAGUEANCIENTS.mod_title": "League Ancients"
+  "LEAGUEANCIENTS.mod_title": "League Ancients",
+  "LEAGUEANCIENTS-DISABLE_BASE_GAME_ANCIENTS.title": "Disable normal Ancients",
+  "LEAGUEANCIENTS-DISABLE_BASE_GAME_ANCIENTS.hover.title": "Disable behaviour",
+  "LEAGUEANCIENTS-DISABLE_BASE_GAME_ANCIENTS.hover.desc": "If set, the normal game Ancients can not be encountered in a run.\n\n[color=#C0C0C0]If [blue]Disable League Ancients[/blue] is set as well, the normal Ancients will not be disabled![/color]",
+
+  "LEAGUEANCIENTS-DISABLE_LEAGUE_ANCIENTS.title": "Disable League Ancients",
+  "LEAGUEANCIENTS-DISABLE_LEAGUE_ANCIENTS.hover.title": "Disable behaviour",
+  "LEAGUEANCIENTS-DISABLE_LEAGUE_ANCIENTS.hover.desc": "If set, the League Ancients can not be encountered in a run."
 }
