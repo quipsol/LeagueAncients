@@ -10,12 +10,12 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace LeagueAncients.Core.Content.Cards;
 
-[Pool(typeof(ColorlessCardPool))]
+[Pool(typeof(EventCardPool))]
 public class SorakasCompassion() : LeagueAncientsCardModel(1, CardType.Skill, CardRarity.Ancient, TargetType.Self)
 {
-    public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
-    public override string PortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
-    public override string CustomPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    // public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    // public override string PortraitPath => null!;// "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    // public override string? CustomPortraitPath => null;// "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [

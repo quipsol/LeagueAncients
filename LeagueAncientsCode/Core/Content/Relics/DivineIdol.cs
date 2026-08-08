@@ -9,6 +9,9 @@ using MegaCrit.Sts2.Core.Models.RelicPools;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// Gain card (Greater) Divine Intervention. Intangible plus damage.
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class DivineIdol : LeagueAncientsRelicModel
 {

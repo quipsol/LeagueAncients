@@ -8,7 +8,9 @@ using MegaCrit.Sts2.Core.Saves.Runs;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Heal to full HP the first time you enter a Rest Site
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class RejuvenationBead : LeagueAncientsRelicModel
 {

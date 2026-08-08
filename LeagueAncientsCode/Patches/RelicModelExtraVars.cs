@@ -36,7 +36,7 @@ public static class RelicModelExtraVars
         var hasOwner = owner is not null;
         locString.Add("HasOwner", hasOwner);
         locString.Add("InRun", hasOwner); // currently there is no need to distinct between IsRun and HasOwner
-        locString.Add("IsMultiplayer", hasOwner && owner!.RunState!.Players.Count > 1);
+        locString.Add("IsMultiplayer", hasOwner && owner!.RunState.Players.Count > 1);
         
         if (!hasOwner) return;
         foreach (var dynamicVar in __instance.DynamicVars.Values.OfType<CalculatedRelicVar>().ToList())

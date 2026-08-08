@@ -15,7 +15,9 @@ using MegaCrit.Sts2.Core.Rooms;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// If you only played Attacks last turn, gain 1 extra Energy.
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class RingOfCarnage : LeagueAncientsRelicModel
 {

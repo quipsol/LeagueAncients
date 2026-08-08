@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Models.Relics;
 
 namespace LeagueAncients.Core.Content.Ancients;
 
+// TODO: Not an Ancient. Pantheon would replace her as the Neow replacement. See what Offers can be taken over by Panth
 public class Soraka : LeagueAncientsAncientModel
 {
     public override string? CustomMapIconPath => "res://LeagueAncients/images/placeholder/100_100/purple.png";
@@ -21,30 +22,8 @@ public class Soraka : LeagueAncientsAncientModel
     public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
     public override Color DialogueColor => new Color("3C1931");
 
-   // public override bool IsValidForAct(ActModel act) => SlayRuneterraConfig.IsEnabled;
-
+    public override bool IsValidForAct(ActModel act) => act.Index == 0;
     
-    // protected override OptionPools MakeOptionPools => new(
-    //             MakePool(
-    //                         AncientOption<SmallCapsule>(),
-    //                         AncientOption<LargeCapsule>(),
-    //                         AncientOption<GoldenPearl>(weight: 20),
-    //                         AncientOption<CursedPearl>(weight: 20),
-    //                         AncientOption<StoneHumidifier>(weight: 10)
-    //             ),
-    //             MakePool(
-    //                         AncientOption<ArcaneScroll>(weight: 10),
-    //                         AncientOption<MassiveScroll>(weight: 10), // multiplayer only
-    //                         AncientOption<ScrollBoxes>(weight: 10),
-    //                         AncientOption<WingedBoots>(weight: 10),
-    //                         AncientOption<PhialHolster>(weight: 10),
-    //                         AncientOption<RejuvenationBead>(),
-    //                         AncientOption<SorakasCompassionRelic>()
-    //             ),
-    //             MakePool(
-    //                         AncientOption<TimeCapsule>()
-    //             ));
-    //
     public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3];
 
     private IEnumerable<EventOption> OptionPool1 => [
@@ -60,11 +39,11 @@ public class Soraka : LeagueAncientsAncientModel
                 RelicOption<ScrollBoxes>(),
                 RelicOption<WingedBoots>(),
                 RelicOption<PhialHolster>(),
-                RelicOption<RejuvenationBead>(),
-                RelicOption<SorakasCompassionRelic>(),
     ];
     private IEnumerable<EventOption> OptionPool3 => [
                 RelicOption<TimeCapsule>(),
+                RelicOption<RejuvenationBead>(),
+                RelicOption<SorakasCompassionRelic>(),
     ];
     
     protected override IReadOnlyList<EventOption> GenerateInitialEventOptions()

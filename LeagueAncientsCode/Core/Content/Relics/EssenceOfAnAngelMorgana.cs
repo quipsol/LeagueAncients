@@ -9,6 +9,9 @@ using MegaCrit.Sts2.Core.Models.RelicPools;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// Gain card AchieveDivinity. Upgrade all Skill (and Power) cards.
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class EssenceOfAnAngelMorgana: LeagueAncientsRelicModel
 {

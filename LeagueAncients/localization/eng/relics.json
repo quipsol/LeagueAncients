@@ -19,11 +19,9 @@
   "LEAGUEANCIENTS-FLAIL_OF_JUSTICE.title": "Flail of Judgement",
   "LEAGUEANCIENTS-FLAIL_OF_JUSTICE.description": "After you break an enemies [gold]Block[/gold], apply [blue]{WeakPower:diff()}[/blue] [gold]Weak[/gold] and [blue]{VulnerablePower:diff()}[/blue] [gold]Vulnerable[/gold].",
   "LEAGUEANCIENTS-FLAIL_OF_JUSTICE.flavor": "",
-
   "LEAGUEANCIENTS-SPEAR_OF_JUSTICE.title": "Spear of Justice",
   "LEAGUEANCIENTS-SPEAR_OF_JUSTICE.description": "At the beginning of combat gain [gold]Vigor[/gold] equal to twice the amount of [gold]Relics[/gold] you have.{IsEvent: ([blue]{CalculatedVigor:diff()}[/blue])|{HasOwner:\n\nGrants [blue]{CalculatedVigor:diff()}[/blue] [gold]Vigor[/gold].|}}",
   "LEAGUEANCIENTS-SPEAR_OF_JUSTICE.flavor": "",
-
   "LEAGUEANCIENTS-SWORD_OF_JUSTICE.title": "Sword Of Justice",
   "LEAGUEANCIENTS-SWORD_OF_JUSTICE.description": "Whenever you play an [red]Attack[/red] gain {SwordOfJusticeStrengthPower:diff()} Strength until the end of your turn.",
   "LEAGUEANCIENTS-SWORD_OF_JUSTICE.flavor": "",
@@ -31,11 +29,9 @@
   "LEAGUEANCIENTS-RING_OF_CARNAGE.title": "Ring of Carnage",
   "LEAGUEANCIENTS-RING_OF_CARNAGE.description": "If you only played [red]attacks[/red] this turn, gain {energyPrefix:energyIcons(1)} at the start of next turn.",
   "LEAGUEANCIENTS-RING_OF_CARNAGE.flavor": "",
-
   "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.title": "Essence of an Angel",
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.description": "Upon pickup, add [blue]1[/blue] [gold]Achieve Divinity[/gold] to your [gold]Deck[/gold].",
   "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_KAYLE.flavor": "",
-  
   "LEAGUEANCIENTS-GUIDING_LIGHT.title": "Guiding Light",
   "LEAGUEANCIENTS-GUIDING_LIGHT.description": "The first [red]Attack[/red] you play each turn costs {energyPrefix:energyIcons(1)} less.",
   "LEAGUEANCIENTS-GUIDING_LIGHT.flavor": "",
@@ -43,18 +39,16 @@
   "LEAGUEANCIENTS-DIVINE_IDOL.title": "Divine Idol",
   "LEAGUEANCIENTS-DIVINE_IDOL.description": "Upon pickup, add {InRun:[blue]1[/blue] [gold]{IsMultiplayer:Greater |}Divine Intervention[/gold]|an [gold]Intervention[/gold]} to your [gold]Deck[/gold].",
   "LEAGUEANCIENTS-DIVINE_IDOL.flavor": "",
-
   "LEAGUEANCIENTS-DIVINE_FEATHER.title": "Divine Feather",
   "LEAGUEANCIENTS-DIVINE_FEATHER.description": "Upon pickup, add [blue]1[/blue] [gold]Celestial Blessing[/gold] to your [gold]Deck[/gold].",
   "LEAGUEANCIENTS-DIVINE_FEATHER.flavor": "",
-
   "LEAGUEANCIENTS-DIVINE_HELMET.title": "Divine Helmet",
   "LEAGUEANCIENTS-DIVINE_HELMET.description": "During combat you can not lose more than [blue]{DamageCap:diff()}[/blue] HP at once.",
   "LEAGUEANCIENTS-DIVINE_HELMET.flavor": "",
 
 
   "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.title": "Essence of an Angel",
-  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold].",
+  "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.description": "Upon pickup, add [blue]1[/blue] [gold]Achieve Divinity[/gold] to your [gold]Deck[/gold].",
   "LEAGUEANCIENTS-ESSENCE_OF_AN_ANGEL_MORGANA.flavor": "",
   "LEAGUEANCIENTS-BLACK_SHIELD.title": "Black Shield",
   "LEAGUEANCIENTS-BLACK_SHIELD.description": "Start each combat with [blue]{ArtifactPower}[/blue] [gold]Artifact[/gold].",
@@ -62,7 +56,14 @@
   "LEAGUEANCIENTS-SOUL_SHACKLES_RELIC.title": "Soul Shackles",
   "LEAGUEANCIENTS-SOUL_SHACKLES_RELIC.description": "Obtain the other two offers. Become cursed with [red]Soul Shackles[/red].",
   "LEAGUEANCIENTS-SOUL_SHACKLES_RELIC.flavor": "",
-
+  "LEAGUEANCIENTS-ZENITH.title": "Zenith",
+  "LEAGUEANCIENTS-ZENITH.description": "While you are at or above {Threshold}%{HasOwner: ({CalculatedThreshold})|} health, gain [blue]{StrengthPower:diff()}[/blue] [gold]Strength[/gold] and [blue]{DexterityPower:diff()}[/blue] [gold]Dexterity[/gold].",
+  "LEAGUEANCIENTS-ZENITH.flavor": "",
+  "LEAGUEANCIENTS-NADIR.title": "Nadir",
+  "LEAGUEANCIENTS-NADIR.description": "While you are at or below {Threshold}%{HasOwner: ({CalculatedThreshold})|} health, gain [blue]{StrengthPower:diff()}[/blue] [gold]Strength[/gold] and [blue]{DexterityPower:diff()}[/blue] [gold]Dexterity[/gold].",
+  "LEAGUEANCIENTS-NADIR.flavor": "",
+  
+  
   "LEAGUEANCIENTS-EMPTY.title": "",
   "LEAGUEANCIENTS-EMPTY.description": "",
   "LEAGUEANCIENTS-EMPTY.flavor": ""

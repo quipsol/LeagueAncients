@@ -3,6 +3,7 @@ using Godot;
 using LeagueAncients.Core.Content.Relics;
 using LeagueAncients.Core.Models;
 using MegaCrit.Sts2.Core.Events;
+using MegaCrit.Sts2.Core.Models;
 
 namespace LeagueAncients.Core.Content.Ancients;
 
@@ -18,29 +19,13 @@ public class Kayle : LeagueAncientsAncientModel
 	public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
 	public override Color DialogueColor => new Color("3C1931");
 
-	//public override bool IsValidForAct(ActModel act) => SlayRuneterraConfig.IsEnabled;
-
+	public override bool IsValidForAct(ActModel act) => act.Index == 1;
 	
-	// protected override OptionPools MakeOptionPools => new(
-	//             // Divine Feather, Divine Helmet, Divine Idol
-	//             MakePool(
-	//                         AncientOption<DivineFeather>(),
-	//                         AncientOption<DivineHelmet>(),
-	//                         AncientOption<DivineIdol>() 
-	//             ),
-	//             // Essence of an Angel, Ring of Carnage, GuidingLight
-	//             MakePool(
-	//                         AncientOption<RingOfCarnage>(),
-	//                         AncientOption<EssenceOfAnAngel>(),
-	//                         AncientOption<GuidingLight>()
-	//             ),
-	//             // Flail of Judgement, Sword of Judgement, Spear of Judgement
-	//             MakePool(
-	//                         AncientOption<SpearOfJustice>(),
-	//                         AncientOption<SwordOfJustice>(),
-	//                         AncientOption<FlailOfJustice>()
-	//             ));
-	//
+/*
+	- <Zenith> While you are at or above 70% health, gain 3 Strength and Dexterity.
+	
+ 
+ */
 
 	public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3];
 
@@ -53,6 +38,7 @@ public class Kayle : LeagueAncientsAncientModel
 				RelicOption<RingOfCarnage>(),
 				RelicOption<EssenceOfAnAngelKayle>(),
 				RelicOption<GuidingLight>(),
+				RelicOption<Zenith>()
 	];
 	private IEnumerable<EventOption> OptionPool3 => [
 				RelicOption<SpearOfJustice>(),

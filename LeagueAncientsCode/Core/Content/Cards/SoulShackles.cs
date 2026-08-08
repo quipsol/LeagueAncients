@@ -13,9 +13,9 @@ namespace LeagueAncients.Core.Content.Cards;
 [Pool(typeof(CurseCardPool))]
 public class SoulShackles() : LeagueAncientsCardModel(-1, CardType.Curse, CardRarity.Ancient, TargetType.Self)
 {
-    public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
-    public override string PortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
-    public override string CustomPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    // public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    // public override string PortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
+    // public override string CustomPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
 
     public override int MaxUpgradeLevel => 0;
     

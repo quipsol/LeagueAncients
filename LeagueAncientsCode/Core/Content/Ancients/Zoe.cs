@@ -1,9 +1,6 @@
-﻿using BaseLib.Extensions;
-using BaseLib.Utils;
-using Godot;
+﻿using Godot;
 using LeagueAncients.Core.Models;
 using MegaCrit.Sts2.Core.Events;
-using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Relics;
 
@@ -11,22 +8,48 @@ namespace LeagueAncients.Core.Content.Ancients;
 
 
 // Gives options from all other ancients (and maybe also rare relics from other characters?)
-// Preferably has 4 or 5 options to choose from but that's kinda hawd :(
 // Add custom ancient card that turns into a random ancient card at the start of combat (and enchants them with something, idk)
 
 //  Total pools: 5
 // Pool 1 - 3: A random relic from other ancients (in full 3-act mod only from other Targonian ancients)
-// Pool 4: A random character specific relic from the Rare category
+// Pool 4: Two random character specific relics from the Rare category
 // Pool 5: A few Zoe specific options
+
+
+/*
+ 
+ What makes Zoe special?
+  1. Can appear in Act 2 or 3
+  2. Has more than 3 Options
+
+ One of the pools is only if Zoe is an Act3 Event. It specifcally grabs one option from the Ancient you have seen in Act 2, which isn't the option chosen
+   Concerns: Act 2 Ancient relics are a bit weaker than Act 3. Maybe make it 2 and have them be random?
+ 
+ 
+ 
+ Act 2 only. Prismatic Gem but instead of 1 bonus energy, cards from other characters have their cost reduced by 1!? (Maybe only the first played each turn)
+   Should also immediately give you some
+ 
+ Gain an additional Ancient potion reward at the end of Elite combats.
+   Need to make Ancient Potion Rarity and the potions. They should be something special.
+   Issues: Potions are already very warping. Making even stronger ones might be a bad idea. Counterpoint: Ancient cards exist, and they are often also very warping.
+   But: I want them all to be very interesting and special. No "Get 5 Strength" ahh shit.
+ 
+ 
+ */
+
+
+
+
 public class Zoe : LeagueAncientsAncientModel
 {
-    public override string? CustomMapIconPath => "res://LeagueAncients/images/placeholder/100_100/purple.png";
-    public override string? CustomMapIconOutlinePath => "res://LeagueAncients/images/placeholder/150_150/black.png";
-    public override string? CustomRunHistoryIconPath => "res://LeagueAncients/images/placeholder/100_100/white.png";
-    public override string? CustomRunHistoryIconOutlinePath => "res://LeagueAncients/images/placeholder/150_150/black.png";
+    public override string CustomMapIconPath => "res://LeagueAncients/images/placeholder/100_100/purple.png";
+    public override string CustomMapIconOutlinePath => "res://LeagueAncients/images/placeholder/150_150/black.png";
+    public override string CustomRunHistoryIconPath => "res://LeagueAncients/images/placeholder/100_100/white.png";
+    public override string CustomRunHistoryIconOutlinePath => "res://LeagueAncients/images/placeholder/150_150/black.png";
 
     //public override string? CustomBackgroundScenePath => "res://SlayRuneterra/scenes/events/background_scenes/zoe.tscn";
-    public override string? CustomScenePath => "res://LeagueAncients/scenes/events/background_scenes/zoe.tscn";
+    public override string CustomScenePath => "res://LeagueAncients/scenes/events/background_scenes/zoe.tscn";
     public override bool IsValidForAct(ActModel act) => false;//SlayRuneterraConfig.IsEnabled;
 
 
@@ -57,32 +80,7 @@ public class Zoe : LeagueAncientsAncientModel
                 RelicOption<JeweledMask>()
     ];
     
- 
-    // protected override OptionPools MakeOptionPools => new(
-    //             MakePool(
-    //                         AncientOption<Orrery>(),
-    //                         AncientOption<PrismaticGem>(),
-    //                         AncientOption<SeaGlass>(relicPrep: (glass) => //An example of a relic that requires setup.
-    //                         {
-    //                             if (Owner == null) return glass;
-    //                             var character = Owner.Character;
-    //                             var characterModel = Rng.NextItem(Owner.UnlockState.Characters.Where(c => c.Id != character.Id)) ?? character;
-    //                             glass.CharacterId = characterModel.Id;
-    //                             return glass;
-    //                         })
-    //             ),
-    //             MakePool( //Options can be assigned weight to change their appearance rates. Clone is a bit rarer, for example.
-    //                         AncientOption<Astrolabe>(weight: 10),
-    //                         AncientOption<Driftwood>(weight: 90)
-    //             ),
-    //             MakePool(
-    //                         AncientOption<CharonsAshes>(),
-    //                         AncientOption<OrangeDough>(),
-    //                         AncientOption<PowerCell>(),
-    //                         AncientOption<PaperKrane>(),
-    //                         AncientOption<BigHat>()
-    //             ));
-    //
+    
     public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3, ..SeaGlassOptions];
 
     private IEnumerable<EventOption> OptionPool1 => [
@@ -126,6 +124,7 @@ public class Zoe : LeagueAncientsAncientModel
         list.Add(RelicOption(seaGlass));
         return 
         [
+                    Rng.NextItem(list)!,
                     Rng.NextItem(list)!,
                     Rng.NextItem(OptionPool2)!,
                     Rng.NextItem(OptionPool3)!,

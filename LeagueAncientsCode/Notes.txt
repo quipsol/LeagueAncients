@@ -1,0 +1,23 @@
+
+I am interested in gathering Telemetry for this mod.
+I think this would be a great way to learn about this in preparation for my Character mod.
+
+I want to implement this with the first public available version of the mod.
+
+Should start working on it as soon as 5 Ancients are done.
+
+From Lamali:
+subscribe event to ModManager.OnMetricsUpload
+and just copy the code for the anonymised metrics data calculated by MetricsUtils.
+
+(Note, the class is called "MetricUtilities")
+
+Downfall uses it and might be a great help to identify how to do this.
+Downfall uses Supabase as a service.
+
+Supabase is free for "https://supabase.com/pricing":
+50.000 monthly active users
+500MB database size
+5GB egress
+5GB cached egress
+1GB file storage

@@ -9,6 +9,9 @@ using MegaCrit.Sts2.Core.Models.RelicPools;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// Gain card Achieve Divinity. Upgrade all Attacks (and Powers) cards.
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class EssenceOfAnAngelKayle : LeagueAncientsRelicModel
 {

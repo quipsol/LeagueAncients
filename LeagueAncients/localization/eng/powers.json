@@ -2,7 +2,15 @@
   "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.title": "Divine Intervention",
   "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.description": "At the beginning of your turn, deal damage to ALL enemies",
   "LEAGUEANCIENTS-DIVINE_INTERVENTION_POWER.smartDescription": "At the beginning of your turn, deal [blue]{Amount}[/blue] damage to ALL enemies.",
-
+  "LEAGUEANCIENTS-ZENITH_POWER.title": "Zenith",
+  "LEAGUEANCIENTS-ZENITH_POWER.description": "While at high health, gain extra [gold]Strength[/gold] and [gold]Dexterity[/gold].",
+  "LEAGUEANCIENTS-ZENITH_POWER.smartDescription": "While this is active, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold].",
+  "LEAGUEANCIENTS-NADIR_POWER.title": "Nadir",
+  "LEAGUEANCIENTS-NADIR_POWER.description": "While at low health, gain extra [gold]Strength[/gold] and [gold]Dexterity[/gold].",
+  "LEAGUEANCIENTS-NADIR_POWER.smartDescription": "While this is active, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold].",
+  
+  
+  
   "LEAGUEANCIENTS-TEST_POWER.title": "Test Power",
   "LEAGUEANCIENTS-TEST_POWER.description": "TEST",
   "LEAGUEANCIENTS-TEST_POWER.smartDescription": "TEST smart"

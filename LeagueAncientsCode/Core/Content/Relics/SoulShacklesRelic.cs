@@ -13,7 +13,9 @@ using MegaCrit.Sts2.Core.Runs;
 namespace LeagueAncients.Core.Content.Relics;
 
 
-
+/// <summary>
+/// Gain the other two Ancient offers. Obtain the curse Soul Shackles
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class SoulShacklesRelic : LeagueAncientsRelicModel
 {

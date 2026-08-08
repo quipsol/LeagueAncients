@@ -1,68 +1,87 @@
-﻿using MegaCrit.Sts2.Core.Localization.DynamicVars;
+﻿using System.Globalization;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 
 namespace LeagueAncients.Util;
 
-public class CalculatedRelicVar(string name) : DynamicVar(name, 55M)
+public class CalculatedRelicVar(string name) : DynamicVar(name, 0M)
 {
-  private Func<RelicModel, Decimal>? _multiplierCalc;
-
+  private Func<RelicModel, decimal>? _multiplierCalc;
+  
+  
   public override void SetOwner(AbstractModel owner)
   {
     base.SetOwner(owner);
-    this.UpdateValues();
+    UpdateValues();
   }
 
-  public CalculatedRelicVar WithMultiplier(Func<RelicModel, Decimal> multiplierCalc)
+  /// <summary>
+  /// Should be called last when initializing.<br/>
+  /// Creates Base and Extra vars using the name + "Base" and "Extra" suffix.
+  /// </summary>
+  /// <param name="baseValue">Add a base value to every result</param>
+  /// <param name="extraValue">Multiply every result by this</param>
+  /// <returns>Returns the CalculatedVar, the BaseVar, and the ExtraVar</returns>
+  public IEnumerable<DynamicVar> FinalizeWithVars(decimal baseValue, decimal  extraValue)
   {
-    if (this._multiplierCalc != null)
+    var baseDynVar = new DynamicVar($"{Name}Base", baseValue);
+    var extraDynVar = new DynamicVar($"{Name}Extra", extraValue);
+    return [this, baseDynVar, extraDynVar];
+  }
+  
+
+
+  /// <summary>
+  /// Set the function that will be used for the multiplier value of this var.
+  /// </summary>
+  public CalculatedRelicVar WithMultiplier(Func<RelicModel, decimal> multiplierCalc)
+  {
+    if (_multiplierCalc is not null)
       throw new InvalidOperationException($"Tried to set extra multiplier calc on {this} twice!");
-    this._multiplierCalc = !(multiplierCalc.Target is AbstractModel) ? multiplierCalc : throw new InvalidOperationException("Multiplier calc must be static!");
+    _multiplierCalc = multiplierCalc.Target is not AbstractModel ? multiplierCalc : throw new InvalidOperationException("Multiplier calc must be static!");
     return this;
   }
 
-  public Decimal Calculate()
+  
+  public decimal Calculate()
   {
-    if (this._multiplierCalc == null)
+    if (_multiplierCalc is null)
       throw new InvalidOperationException("Extra multiplier calc must be specified!");
-    RelicModel owner = (RelicModel) this._owner!;
-    Decimal num = this._multiplierCalc(owner);
-    return this.GetBaseVar().BaseValue + this.GetExtraVar().BaseValue * num;
+    var num = _multiplierCalc((RelicModel) _owner!);
+    return GetBaseVar().BaseValue + GetExtraVar().BaseValue * num;
   }
 
   public void RecalculateForUpgradeOrEnchant()
   {
-    Decimal baseValue = this.GetBaseVar().BaseValue;
-    if (baseValue != this.BaseValue)
-      this.WasJustUpgraded = true;
-    this.BaseValue = baseValue;
+    var baseValue = GetBaseVar().BaseValue;
+    if (baseValue != BaseValue)
+      WasJustUpgraded = true;
+    BaseValue = baseValue;
   }
 
-  public void UpdatePreviewVar(bool runGlobalHooks)
-  {
-    this.PreviewValue = this.Calculate();
-  }
+  public void UpdatePreviewVar(bool runGlobalHooks)=> PreviewValue = Calculate();
+  
+  /// <summary>
+  /// Get the DynamicVar that should be used for this calculation's base value.
+  /// </summary>
+  protected virtual DynamicVar GetBaseVar() => ((RelicModel)_owner!).DynamicVars[$"{Name}Base"];
+  
 
+  /// <summary>
+  /// Get the DynamicVar that should be used for this calculation's extra value.
+  /// </summary>
+  protected virtual DynamicVar GetExtraVar() => ((RelicModel)_owner!).DynamicVars[$"{Name}Extra"];
   
   
-  protected virtual DynamicVar GetBaseVar()
-  {
-    return ((RelicModel) this._owner!).DynamicVars.CalculationBase;
-  }
+  /// <inheritdoc/>
+  protected override decimal GetBaseValueForIConvertible() => Calculate();
 
-  protected virtual DynamicVar GetExtraVar()
-  {
-    return ((RelicModel) this._owner!).DynamicVars.CalculationExtra;
-  }
-
-  protected override Decimal GetBaseValueForIConvertible() => this.Calculate();
-
-  public override string ToString() => this.Calculate().ToString();
+  /// <inheritdoc/>
+  public override string ToString() => Calculate().ToString(CultureInfo.InvariantCulture);
 
   private void UpdateValues()
   {
-    if (this._owner == null)
-      return;
-    this.BaseValue = this.GetBaseVar().BaseValue;
+    if (_owner is null) return;
+    BaseValue = GetBaseVar().BaseValue;
   }
 }

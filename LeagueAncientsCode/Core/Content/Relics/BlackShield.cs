@@ -11,7 +11,9 @@ using MegaCrit.Sts2.Core.Rooms;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Gain Artifact
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class BlackShield : LeagueAncientsRelicModel
 {

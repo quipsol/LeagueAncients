@@ -24,9 +24,7 @@ public class SpearOfJustice : LeagueAncientsRelicModel
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-                new CalculationBaseVar(0M),
-                new CalculationExtraVar(1M),
-                new CalculatedRelicVar("CalculatedVigor").WithMultiplier(relic => relic.Owner.Relics.Count * 3)
+                .. new CalculatedRelicVar("CalculatedVigor").WithMultiplier(relic => relic.Owner.Relics.Count * 3).FinalizeWithVars(0, 1)
     ];
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)

@@ -13,6 +13,9 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// If you break Block, apply Debuffs to the target.
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class FlailOfJustice : LeagueAncientsRelicModel
 {

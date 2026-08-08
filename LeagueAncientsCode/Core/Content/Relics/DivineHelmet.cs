@@ -15,6 +15,9 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// Limits the amount of damage you can take in one hit.
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class DivineHelmet : LeagueAncientsRelicModel
 {
