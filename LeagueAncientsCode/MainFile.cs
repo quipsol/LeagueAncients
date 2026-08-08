@@ -3,6 +3,7 @@ using BaseLib.Config;
 using Godot;
 using HarmonyLib;
 using LeagueAncients.ArtRoller;
+using LeagueAncients.Core.Multiplayer;
 using MegaCrit.Sts2.Core.Modding;
 
 namespace LeagueAncients;
@@ -28,7 +29,10 @@ public partial class MainFile : Node
         
         // Config
         ModConfigRegistry.Register(MOD_ID, new Config());
+
         
+        RunConfigSaveData.Register();
+
         // Harmony Patching
         Harmony harmony = new(MOD_ID);
         harmony.PatchAll();

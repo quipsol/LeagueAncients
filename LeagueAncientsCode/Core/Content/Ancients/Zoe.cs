@@ -1,5 +1,6 @@
 ﻿using Godot;
 using LeagueAncients.Core.Models;
+using LeagueAncients.Core.Multiplayer;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Relics;
@@ -51,7 +52,9 @@ public class Zoe : LeagueAncientsAncientModel
     //public override string? CustomBackgroundScenePath => "res://SlayRuneterra/scenes/events/background_scenes/zoe.tscn";
     public override string CustomScenePath => "res://LeagueAncients/scenes/events/background_scenes/zoe.tscn";
     
-    public override bool IsValidForAct(ActModel act) => !Config.DisableLeagueAncients && act.Index is 1 or 2;
+    //public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients && act.Index is 1 or 2;
+    // Force Zoe to be Act 3 until we have actual Act 3 ancients
+    public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients  && act.Index == 2;
 
 
     

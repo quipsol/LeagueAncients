@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using HarmonyLib;
+using LeagueAncients.Core.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Events;
 using MegaCrit.Sts2.Core.Unlocks;
@@ -19,7 +20,6 @@ public static class DisableBaseGameAncients
                 ModelDb.AncientEvent<Nonupeipe>(),
                 ModelDb.AncientEvent<Tanx>(),
                 ModelDb.AncientEvent<Vakuu>(),
-                ModelDb.AncientEvent<Darv>(),
                 //ModelDb.AncientEvent<Neow>(),
     ];
     
@@ -35,7 +35,25 @@ public static class DisableBaseGameAncients
     [HarmonyPostfix]
     private static void RemoveBaseGameAncients(ref IEnumerable<AncientEventModel> __result)
     {
-        if(Config.DisableBaseGameAncients && !Config.DisableLeagueAncients)
+        if(RunConfigSnapshot.Active.DisableBaseGameAncients && !RunConfigSnapshot.Active.DisableLeagueAncients)
             __result = __result.Except(ManualListOfBaseAncients);
+    }
+}
+
+[HarmonyPatch]
+public static class DisableBaseGameSharedAncients
+{
+    // Using a manual list here because trying to gather them dynamically might end up including modded Ancients
+    private static List<AncientEventModel> ManualListOfSharedBaseAncients =>
+    [
+                ModelDb.AncientEvent<Darv>(),
+    ];
+    
+    [HarmonyPatch(typeof(ActModel), nameof(ActModel.SetSharedAncientSubset))]
+    [HarmonyPrefix]
+    private static void RemoveBaseGameSharedAncients(ref IEnumerable<AncientEventModel> sharedAncientSubset)
+    {
+        if(RunConfigSnapshot.Active.DisableBaseGameAncients && !RunConfigSnapshot.Active.DisableLeagueAncients)
+            sharedAncientSubset = sharedAncientSubset.Except(ManualListOfSharedBaseAncients);
     }
 }
