@@ -1,5 +1,6 @@
 using BaseLib.Patches.Saves;
 using HarmonyLib;
+using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves;
 
@@ -36,7 +37,7 @@ internal static class RunConfigSaveData
                 RunConfigSnapshot.SetActive(snapshot, RunConfigSource.SavedRun);
             });
 
-        MainFile.Logger.Info($"Registered extended run save data '{SAVE_ID}'.");
+        ModLog.Info($"Registered extended run save data '{SAVE_ID}'.");
     }
 
     /// <summary>

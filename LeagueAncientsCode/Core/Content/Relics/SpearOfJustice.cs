@@ -15,6 +15,9 @@ using MegaCrit.Sts2.Core.Models.RelicPools;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// On combat start gain Vigor based on your Relic count
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class SpearOfJustice : LeagueAncientsRelicModel
 {

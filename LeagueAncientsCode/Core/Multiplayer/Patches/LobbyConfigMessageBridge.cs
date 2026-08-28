@@ -1,5 +1,6 @@
 using BaseLib.Abstracts;
 using HarmonyLib;
+using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Multiplayer.Game;
 using MegaCrit.Sts2.Core.Multiplayer.Game.Lobby;
 using MegaCrit.Sts2.Core.Runs;
@@ -53,7 +54,7 @@ internal static class LobbyConfigMessageBridge
     {
         if (_lobbyNetService is not { Type: NetGameType.Client })
         {
-            MainFile.Logger.Warn($"Ignoring {nameof(HostRunConfigMessage)} from {senderId}: not currently a lobby client.");
+            ModLog.Warn($"Ignoring {nameof(HostRunConfigMessage)} from {senderId}: not currently a lobby client.");
             return;
         }
 
@@ -70,7 +71,7 @@ internal static class LobbyConfigMessageBridge
         Unregister(_lobbyNetService); // Clean up just in case
         netService.RegisterMessageHandler<CustomMessageWrapper>(HandleWrappedMessage);
         _lobbyNetService = netService;
-        MainFile.Logger.Debug($"Listening for custom messages on the {netService.Type} lobby.");
+        ModLog.Debug($"Listening for custom messages on the {netService.Type} lobby.");
     }
 
     private static void Unregister(INetGameService? netService)

@@ -29,7 +29,7 @@ public class Morgana : LeagueAncientsAncientModel
       - <> Enchant a power with [] -> Reduce its cost by 1, when played create a copy (not exact copy) in your draw pile
       - <> 3(2) Energy. Stun the enemy at the start of your next turn.
       - <Essence of an Angel> Apotheosis but only for skills (and powers if upgraded)
-      - <Nadir> While you are at or below 30% health, gain 3 Strength and Dexterity.
+      - <Nadir> While you are at or below 30% health, gain 1 Strength and 3 Dexterity.
       
       - <Desperate Bargain> Upon reaching the boss, obtain the other two offered relics (how to handle giving relics outside of rooms!?)
       - <Soul Shackles> Obtain the other two offered relics, get cursed with Shackles -> Unplayable, Eternal, when drawn lose 1 Energy.

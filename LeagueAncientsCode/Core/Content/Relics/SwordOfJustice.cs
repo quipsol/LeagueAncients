@@ -12,7 +12,9 @@ using MegaCrit.Sts2.Core.Models.RelicPools;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// After you play an attack, gain temporary Strength
+/// </summary>
 [Pool(typeof(EventRelicPool))]
 public class SwordOfJustice : LeagueAncientsRelicModel
 {

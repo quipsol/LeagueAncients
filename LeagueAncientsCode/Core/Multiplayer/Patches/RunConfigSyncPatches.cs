@@ -1,5 +1,6 @@
 using BaseLib.Abstracts;
 using HarmonyLib;
+using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Multiplayer.Game;
@@ -43,7 +44,7 @@ internal static class RunConfigSyncPatches
         RunConfigSnapshot.SetActive(snapshot, RunConfigSource.Local);
 
         if (netService.Type != NetGameType.Host) return;
-        MainFile.Logger.Info($"Sending run config to clients: {snapshot}");
+        ModLog.Info($"Sending run config to clients: {snapshot}");
         CustomMessageWrapper.Send(new HostRunConfigMessage { Snapshot = snapshot }, netService);
     }
 
@@ -62,18 +63,18 @@ internal static class RunConfigSyncPatches
         if (__instance.NetService.Type != NetGameType.Client) return; // only Clients care
         if (RunConfigSnapshot.Source == RunConfigSource.RemoteHost) return; // If we don't have a "RemoteHost" source, something went wrong.
 
-        MainFile.Logger.Error(
+        ModLog.Error(
             "Run is starting but the host never sent its LeagueAncients settings. Falling back to mod defaults. If the host's settings " +
             "differ, this run will desync during map generation!");
         
         if (ABORT_RUN_ON_MISSING_HOST_CONFIG)
         {
-            MainFile.Logger.Warn("Force disconnecting due to the above error.");
+            ModLog.Warn("Force disconnecting due to the above error.");
             __instance.NetService.Disconnect(NetError.InternalError);
             return;
         }
 
-        MainFile.Logger.Warn("Loading defaults as fallback. This has a high chance to cause desyncs later in the run!");
+        ModLog.Warn("Loading defaults as fallback. This has a high chance to cause desyncs later in the run!");
         RunConfigSnapshot.SetActive(RunConfigSnapshot.Defaults(), RunConfigSource.Fallback);
     }
 

@@ -1,3 +1,4 @@
+using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Multiplayer.Serialization;
 
 namespace LeagueAncients.Core.Multiplayer;
@@ -59,7 +60,7 @@ public sealed class RunConfigSnapshot : IPacketSerializable
     /// </summary>
     public static RunConfigSnapshot Defaults()
     {
-        MainFile.Logger.Warn("Default Config loaded. Something went wrong during Config syncing, the run will likely reach state divergence at some point!");
+        ModLog.Warn("Default Config loaded. Something went wrong during Config syncing, the run will likely reach state divergence at some point!");
         // Theoretically they should all be false but who knows what I end up doing, so we grab them like this instead.
         var config = BaseLib.Config.ModConfigRegistry.Get<Config>();
         return new RunConfigSnapshot
@@ -72,10 +73,10 @@ public sealed class RunConfigSnapshot : IPacketSerializable
     public static void SetActive(RunConfigSnapshot snapshot, RunConfigSource source)
     {
         if(_active is not null)
-            MainFile.Logger.Warn("Setting a new run config while one is already set.");
+            ModLog.Warn("Setting a new run config while one is already set.");
         _active = snapshot;
         Source = source;
-        MainFile.Logger.Info($"Active run config ({source}): {snapshot}");
+        ModLog.Info($"Active run config ({source}): {snapshot}");
     }
 
     /// <summary>
@@ -88,7 +89,7 @@ public sealed class RunConfigSnapshot : IPacketSerializable
 
         _active = null;
         Source = RunConfigSource.None;
-        MainFile.Logger.Info("Active run config reset to null.");
+        ModLog.Info("Active run config reset to null.");
     }
 
     public void Serialize(PacketWriter writer)

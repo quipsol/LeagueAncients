@@ -46,9 +46,10 @@ Draw 7 cards. Randomize the cost of hand cards this turn.
 
 Ancient potions (every potion has 1 Ancient associated with them):
 Gain 1 Intangible (Taric)
-Gain 1 Artifact (Morgana)
+Gain 1 Artifact (Morgana) (On demand Artifact, even just once compared to the relic, is too busted!)
 All enemies take double damage this turn (Kayle)
 Fill all your empty potion slots with Rare or Ancient potions (Zoe)
-
+Gain reverse hunter killer buff for the rest of combat
+Upgrade all cards in your deck for the rest of combat
 
  */

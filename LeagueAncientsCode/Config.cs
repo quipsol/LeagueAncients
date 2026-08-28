@@ -1,7 +1,13 @@
 ﻿using BaseLib.Config;
+using LeagueAncients.Core.Multiplayer;
 
 namespace LeagueAncients;
 
+
+/// <summary>
+/// Gameplay code must read <see cref="RunConfigSnapshot.Active"/> rather than this directly. <br/>
+/// This is not synced between players!
+/// </summary>
 [ConfigHoverTipsByDefault]
 public class Config : SimpleModConfig
 {

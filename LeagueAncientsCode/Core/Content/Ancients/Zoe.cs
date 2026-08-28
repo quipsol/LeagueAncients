@@ -36,7 +36,7 @@ namespace LeagueAncients.Core.Content.Ancients;
    Issues: Potions are already very warping. Making even stronger ones might be a bad idea. Counterpoint: Ancient cards exist, and they are often also very warping.
    But: I want them all to be very interesting and special. No "Get 5 Strength" ahh shit.
  
- 
+ Gain 1 Energy at the start of your turn. You can not gain Energy during your turn.
  */
 
 

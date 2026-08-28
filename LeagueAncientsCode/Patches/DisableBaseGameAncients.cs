@@ -3,6 +3,9 @@ using HarmonyLib;
 using LeagueAncients.Core.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Events;
+using MegaCrit.Sts2.Core.Random;
+using MegaCrit.Sts2.Core.Rooms;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Unlocks;
 
 namespace LeagueAncients.Patches;
@@ -23,20 +26,32 @@ public static class DisableBaseGameAncients
                 //ModelDb.AncientEvent<Neow>(),
     ];
     
-    private static IEnumerable<MethodBase> TargetMethods()
-    {
-        return AccessTools
-                    .GetTypesFromAssembly(typeof(ActModel).Assembly)
-                    .Where(type => typeof(ActModel).IsAssignableFrom(type))
-                    .Select(type => AccessTools.DeclaredMethod(type, nameof(ActModel.GetUnlockedAncients), [typeof(UnlockState)]))
-                    .Where(methodInfo => methodInfo != null && !methodInfo.IsAbstract);
-    }
+    // private static IEnumerable<MethodBase> TargetMethods()
+    // {
+    //     return AccessTools
+    //                 .GetTypesFromAssembly(typeof(ActModel).Assembly)
+    //                 .Where(type => typeof(ActModel).IsAssignableFrom(type))
+    //                 .Select(type => AccessTools.DeclaredMethod(type, nameof(ActModel.GetUnlockedAncients), [typeof(UnlockState)]))
+    //                 .Where(methodInfo => methodInfo != null && !methodInfo.IsAbstract);
+    // }
+    //
+    // [HarmonyPostfix]
+    // private static void RemoveBaseGameAncients(ref IEnumerable<AncientEventModel> __result)
+    // {
+    //     // This removes them from the Compendium too. And I cant check if RunState is null because you can open the Compendium inside runs.
+    //     // Do I have to transpile ActModel.GenerateRooms?
+    //     if (RunManager.Instance.DebugOnlyGetState() is null) return; // not a fix :(
+    //     if(RunConfigSnapshot.Active.DisableBaseGameAncients && !RunConfigSnapshot.Active.DisableLeagueAncients)
+    //         __result = __result.Except(ManualListOfBaseAncients);
+    // }
     
+    // This makes an extra Rng call and I dont like that
+    [HarmonyPatch(typeof(ActModel), nameof(ActModel.GenerateRooms))]
     [HarmonyPostfix]
-    private static void RemoveBaseGameAncients(ref IEnumerable<AncientEventModel> __result)
+    private static void RemoveBaseGameAncients(ActModel __instance, ref RoomSet ____rooms, List<AncientEventModel>? ____sharedAncientSubset, Rng rng, UnlockState unlockState)
     {
         if(RunConfigSnapshot.Active.DisableBaseGameAncients && !RunConfigSnapshot.Active.DisableLeagueAncients)
-            __result = __result.Except(ManualListOfBaseAncients);
+            ____rooms.Ancient = rng.NextItem(__instance.GetUnlockedAncients(unlockState).Except(ManualListOfBaseAncients).Concat(____sharedAncientSubset ?? []))!;
     }
 }
 

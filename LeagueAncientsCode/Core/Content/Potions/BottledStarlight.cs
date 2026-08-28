@@ -1,4 +1,7 @@
-﻿using LeagueAncients.Core.Models;
+﻿using System.Diagnostics;
+using BaseLib.Abstracts;
+using LeagueAncients.Core.Models;
+using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -6,6 +9,7 @@ using MegaCrit.Sts2.Core.Entities.Potions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace LeagueAncients.Core.Content.Potions;

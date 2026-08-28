@@ -1,4 +1,5 @@
 ﻿using Godot;
+using LeagueAncients.Logging;
 
 namespace LeagueAncients.Extensions;
 
@@ -15,7 +16,7 @@ public static class StringExtensions
         path = Path.Join(MainFile.RES_PATH, "images", "card_portraits", path);
         if (ResourceLoader.Exists(path)) return path;
 
-        MainFile.Logger.Info("Could not find card image path: " + path);
+        ModLog.Info("Could not find card image path: " + path);
         return Path.Join(MainFile.RES_PATH, "images", "card_portraits", "card.png");
     }
 
@@ -24,7 +25,7 @@ public static class StringExtensions
         path = Path.Join(MainFile.RES_PATH, "images", "card_portraits", "big", path);
         if (ResourceLoader.Exists(path)) return path;
 
-        MainFile.Logger.Info("Could not find big card image path: " + path);
+        ModLog.Info("Could not find big card image path: " + path);
         return Path.Join(MainFile.RES_PATH, "images", "card_portraits", "big", "card.png");
     }
 
@@ -33,7 +34,7 @@ public static class StringExtensions
         path = Path.Join(MainFile.RES_PATH, "images", "powers", path);
         if (ResourceLoader.Exists(path)) return path;
 
-        MainFile.Logger.Info("Could not find power image path: " + path);
+        ModLog.Info("Could not find power image path: " + path);
         return Path.Join(MainFile.RES_PATH, "images", "powers", "power.png");
     }
 
@@ -42,7 +43,7 @@ public static class StringExtensions
         path = Path.Join(MainFile.RES_PATH, "images", "powers", "big", path);
         if (ResourceLoader.Exists(path)) return path;
 
-        MainFile.Logger.Info("Could not find big power image path: " + path);
+        ModLog.Info("Could not find big power image path: " + path);
         return Path.Join(MainFile.RES_PATH, "images", "powers", "big", "power.png");
     }
 
@@ -51,7 +52,7 @@ public static class StringExtensions
         path = Path.Join(MainFile.RES_PATH, "images", "relics", path);
         if (ResourceLoader.Exists(path)) return path;
 
-        MainFile.Logger.Info("Could not find relic image path: " + path);
+        ModLog.Info("Could not find relic image path: " + path, LogTopic.Visual | LogTopic.Model);
         return Path.Join(MainFile.RES_PATH, "images", "relics", "relic.png");
     }
 
@@ -60,7 +61,7 @@ public static class StringExtensions
         path = Path.Join(MainFile.RES_PATH, "images", "relics", "big", path);
         if (ResourceLoader.Exists(path)) return path;
 
-        MainFile.Logger.Info("Could not find big relic image path: " + path);
+        ModLog.Info("Could not find big relic image path: " + path);
         return Path.Join(MainFile.RES_PATH, "images", "relics", "big", "relic.png");
     }
 

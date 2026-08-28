@@ -29,6 +29,7 @@ public class FlailOfJustice : LeagueAncientsRelicModel
     {
         if (!target.IsMonster || target.IsDead)
             return;
+        Flash();
         await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), target, DynamicVars[nameof(WeakPower)].BaseValue, Owner.Creature, null);
         await PowerCmd.Apply<VulnerablePower>(new ThrowingPlayerChoiceContext(), target, DynamicVars[nameof(VulnerablePower)].BaseValue, Owner.Creature, null);
 

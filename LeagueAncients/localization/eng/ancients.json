@@ -154,7 +154,18 @@
   "LEAGUEANCIENTS-MORGANA.talk.ANY.0-1r.char": "[jitter][b]SACRED DEMON![/b][/jitter]\nWhat have you done to me!?",
   "LEAGUEANCIENTS-MORGANA.talk.ANY.0-1r.next": "Continue",
   "LEAGUEANCIENTS-MORGANA.talk.ANY.0-2r.ancient": "Exactly what you bargained for.",
-  "LEAGUEANCIENTS-MORGANA.talk.ANY.1-0r.ancient": "Any greeting two?"
+  "LEAGUEANCIENTS-MORGANA.talk.ANY.1-0r.ancient": "Any greeting two?",
+
+
+  "LEAGUEANCIENTS-DIANA.epithet": "",
+  "LEAGUEANCIENTS-DIANA.talk.ANY.0-0r.ancient": "Reusable generic greeting.",
+  "LEAGUEANCIENTS-DIANA.talk.firstVisitEver.0-0.ancient": "First time greeting.",
+  "LEAGUEANCIENTS-DIANA.title": "Diana",
+
+  "LEAGUEANCIENTS-LEONA.epithet": "",
+  "LEAGUEANCIENTS-LEONA.talk.ANY.0-0r.ancient": "Reusable generic greeting.",
+  "LEAGUEANCIENTS-LEONA.talk.firstVisitEver.0-0.ancient": "First time greeting.",
+  "LEAGUEANCIENTS-LEONA.title": "Leona"
   
   
 }

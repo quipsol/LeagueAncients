@@ -4,6 +4,7 @@ using Godot;
 using HarmonyLib;
 using LeagueAncients.ArtRoller;
 using LeagueAncients.Core.Multiplayer;
+using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Modding;
 
 namespace LeagueAncients;
@@ -16,10 +17,10 @@ public partial class MainFile : Node
     
     public static readonly string CardsDirectory = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "ArtRoller");
     
-    public static MegaCrit.Sts2.Core.Logging.Logger Logger { get; } = new(MOD_ID, MegaCrit.Sts2.Core.Logging.LogType.Generic);
-
     public static void Initialize()
     {
+        ModLog.Info("Begin init");
+        
         // Art Roller
         Directory.CreateDirectory(CardsDirectory);
         CardArtRoller.RegisterAllFromDirectory(CardsDirectory);
@@ -36,6 +37,8 @@ public partial class MainFile : Node
         // Harmony Patching
         Harmony harmony = new(MOD_ID);
         harmony.PatchAll();
+        
+        ModLog.Info("Init complete");
         
     }
 }
