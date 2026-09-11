@@ -2,7 +2,6 @@ using System.Reflection;
 using BaseLib.Config;
 using Godot;
 using HarmonyLib;
-using LeagueAncients.ArtRoller;
 using LeagueAncients.Core.Multiplayer;
 using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Modding;
@@ -14,24 +13,15 @@ public partial class MainFile : Node
 {
     public const string MOD_ID = "LeagueAncients"; //Used for resource filepath
     public const string RES_PATH = $"res://{MOD_ID}";
-    
-    public static readonly string CardsDirectory = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "ArtRoller");
-    
     public static void Initialize()
     {
         ModLog.Info("Begin init");
-        
-        // Art Roller
-        Directory.CreateDirectory(CardsDirectory);
-        CardArtRoller.RegisterAllFromDirectory(CardsDirectory);
         
         // Godot
         Godot.Bridge.ScriptManagerBridge.LookupScriptsInAssembly(Assembly.GetExecutingAssembly());
         
         // Config
         ModConfigRegistry.Register(MOD_ID, new Config());
-
-        
         RunConfigSaveData.Register();
 
         // Harmony Patching
