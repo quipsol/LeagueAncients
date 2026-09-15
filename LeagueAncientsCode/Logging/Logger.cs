@@ -55,7 +55,7 @@ public class Logger
 				{
 					LogPrinter.Print(LogLevel.Error, LogTopic.All, null, "Invalid log command line argument! Could not parse " + commandLineArgs[i + 2] + " as LogLevel", 1);
 				}
-				LogLevelTypeMap[enumVal.Value] = enumVal2.Value;
+				LogLevelTypeMap[enumVal!.Value] = enumVal2!.Value;
 				LogPrinter.Print(LogLevel.Info, LogTopic.All, null, $"Log level for {enumVal} set to {enumVal2}", 1);
 			}
 		}

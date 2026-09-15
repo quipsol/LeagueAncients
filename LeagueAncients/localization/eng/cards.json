@@ -13,7 +13,15 @@
   "LEAGUEANCIENTS-ACHIEVE_DIVINITY_KAYLE.title": "Achieve Divinity",
   "LEAGUEANCIENTS-ACHIEVE_DIVINITY_KAYLE.description": "[gold]Upgrade[/gold] ALL your [red]Attack[/red]{IfUpgraded:show: and [blue]Power[/blue]|} cards.",
   "LEAGUEANCIENTS-ACHIEVE_DIVINITY_MORGANA.title": "Achieve Divinity",
-  "LEAGUEANCIENTS-ACHIEVE_DIVINITY_MORGANA.description": "[gold]Upgrade[/gold] ALL your [green]Skill[/green]{IfUpgraded:show: and [blue]Power[/blue]|} cards."
+  "LEAGUEANCIENTS-ACHIEVE_DIVINITY_MORGANA.description": "[gold]Upgrade[/gold] ALL your [green]Skill[/green]{IfUpgraded:show: and [blue]Power[/blue]|} cards.",
   
   
+  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.title": "Locket of the Iron Solari",
+  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.description": "ALL allies gain {Block:diff()} [gold]Block[/gold].",
+  "LEAGUEANCIENTS-COSMIC_RADIANCE.title": "Cosmic Radiance",
+  "LEAGUEANCIENTS-COSMIC_RADIANCE.description": "Next turn ALL allies gain 1 [gold]Intangible[/gold].",
+  
+  
+  "LEAGUEANCIENTS-EMPTY_CARD.title": "",
+  "LEAGUEANCIENTS-EMPTY_CARD.description": ""
 }

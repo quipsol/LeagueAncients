@@ -1,0 +1,11 @@
+﻿{
+  "LEAGUEANCIENTS-SHAREHOLDER.title": "Shareholder",
+  "LEAGUEANCIENTS-SHAREHOLDER.description": "After being played, give this card to a random ally and reduce its cost by {Energy:energyIcons()} for the rest of combat.",
+  "LEAGUEANCIENTS-SHAREHOLDER.extraCardText": "Shareholder",
+  
+  
+  "LEAGUEANCIENTS-EMPTY_ENCHANTMENT.title": "",
+  "LEAGUEANCIENTS-EMPTY_ENCHANTMENT.description": "",
+  "LEAGUEANCIENTS-EMPTY_ENCHANTMENT.extraCardText": ""
+  
+}

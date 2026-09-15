@@ -62,9 +62,30 @@
   "LEAGUEANCIENTS-NADIR.title": "Nadir",
   "LEAGUEANCIENTS-NADIR.description": "While you are at or below {Threshold}%{HasOwner: ({CalculatedThreshold})|} health, gain [blue]{StrengthPower:diff()}[/blue] [gold]Strength[/gold] and [blue]{DexterityPower:diff()}[/blue] [gold]Dexterity[/gold].",
   "LEAGUEANCIENTS-NADIR.flavor": "",
+
+  "LEAGUEANCIENTS-ENDOWMENT.title": "Endowment",
+  "LEAGUEANCIENTS-ENDOWMENT.description": "If you end your turn with unspent {LeftoverEnergy:energyIcons()}, grant all other allies {GrantedEnergy:energyIcons()} at the start of their next turn.",
+  "LEAGUEANCIENTS-ENDOWMENT.flavor": "",
+  "LEAGUEANCIENTS-RING_OF_FRIENDSHIP.title": "Ring of Friendship",
+  "LEAGUEANCIENTS-RING_OF_FRIENDSHIP.description": "For each Player with [gold]Ring of Friendship[/gold], gain [blue]{BaseGoldIncrease:percentMore()}%[/blue] additional [gold]Gold[/gold].",
+  "LEAGUEANCIENTS-RING_OF_FRIENDSHIP.flavor": "",
+  "LEAGUEANCIENTS-BRAVADO.title": "Bravado",
+  "LEAGUEANCIENTS-BRAVADO.description": "Each turn, after the first time you played 2 [gold]Strike[/gold] in a row, gain {Energy:energyIcons()} and draw [blue]{Cards}[/blue] {Cards:plural:card|cards}.",
+  "LEAGUEANCIENTS-BRAVADO.flavor": "",
+  "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.title": "Sword Of Blossoming Dawn",
+  "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.description": "Every {AttackThreshold:plural:Attack|[blue]{}[/blue] Attacks} you play heal your lowest health ally (excluding yourself) by [blue]{Heal}[/blue].",
+  "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.flavor": "",
+  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.title": "Locket of the Iron Solari",
+  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.description": "Upon pickup, add [blue]1[/blue] [gold]Locket of the Iron Solari[/gold] into your deck.",
+  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.flavor": "",
+  "LEAGUEANCIENTS-COSMIC_RADIANCE.title": "Cosmic Radiance",
+  "LEAGUEANCIENTS-COSMIC_RADIANCE.description": "Upon pickup, add [blue]1[/blue] [gold]Cosmic Radiance[/gold] into your deck.",
+  "LEAGUEANCIENTS-COSMIC_RADIANCE.flavor": "",
+  "LEAGUEANCIENTS-SHAREHOLDER.title": "Shareholder",
+  "LEAGUEANCIENTS-SHAREHOLDER.description": "Enchant up to [blue]{Cards}[/blue] [red]Attacks[/red] or [green]Skills[/green] with [gold]Shareholder[/gold].",
+  "LEAGUEANCIENTS-SHAREHOLDER.flavor": "",
   
-  
-  "LEAGUEANCIENTS-EMPTY.title": "",
-  "LEAGUEANCIENTS-EMPTY.description": "",
-  "LEAGUEANCIENTS-EMPTY.flavor": ""
+  "LEAGUEANCIENTS-EMPTY_RELIC.title": "",
+  "LEAGUEANCIENTS-EMPTY_RELIC.description": "",
+  "LEAGUEANCIENTS-EMPTY_RELIC.flavor": ""
 }

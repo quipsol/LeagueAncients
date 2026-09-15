@@ -1,8 +1,10 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
+using BaseLib.Utils;
 using Godot;
 using LeagueAncients.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace LeagueAncients.Core.Models;
 
@@ -12,6 +14,7 @@ namespace LeagueAncients.Core.Models;
 /// This will generate a class that extends this one.
 /// You can also just create the class manually; just make sure to inherit from this class.
 /// </summary>
+[Pool(typeof(EventCardPool))]
 public abstract class LeagueAncientsCardModel(int cost, CardType type, CardRarity rarity, TargetType target) :
             CustomCardModel(cost, type, rarity, target)
 {

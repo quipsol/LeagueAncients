@@ -1,15 +1,13 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
+using BaseLib.Utils;
 using LeagueAncients.Extensions;
+using MegaCrit.Sts2.Core.Models.RelicPools;
 
 namespace LeagueAncients.Core.Models;
 
-/// <summary>
-/// This is the base class for your mod's relics, which is set up to load the relic's images from your mod's resources.
-/// When creating a relic, right click the Relics folder and create a new file with the Custom Relic template.
-/// This will generate a class that extends this one.
-/// You can also just create the class manually; just make sure to inherit from this class.
-/// </summary>
+
+[Pool(typeof(EventRelicPool))]
 public abstract class LeagueAncientsRelicModel : CustomRelicModel
 {
     //LeagueAncients/images/relics

@@ -17,6 +17,6 @@ public class DivineInterventionPower : LeagueAncientsPowerModel
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
         await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);
-        await PowerCmd.Remove(this);
+        await PowerCmd.Decrement(this);
     }
 }

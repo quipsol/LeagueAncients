@@ -20,7 +20,7 @@ public class CalculatedRelicVar(string name) : DynamicVar(name, 0M)
   /// Creates Base and Extra vars using the name + "Base" and "Extra" suffix.
   /// </summary>
   /// <param name="baseValue">Add a base value to every result</param>
-  /// <param name="extraValue">Multiply every result by this</param>
+  /// <param name="extraValue">Multiply the function result by this</param>
   /// <returns>Returns the CalculatedVar, the BaseVar, and the ExtraVar</returns>
   public IEnumerable<DynamicVar> FinalizeWithVars(decimal baseValue, decimal  extraValue)
   {
