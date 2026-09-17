@@ -157,15 +157,20 @@
   "LEAGUEANCIENTS-MORGANA.talk.ANY.1-0r.ancient": "Any greeting two?",
 
 
+  "LEAGUEANCIENTS-DIANA.title": "Diana",
   "LEAGUEANCIENTS-DIANA.epithet": "",
   "LEAGUEANCIENTS-DIANA.talk.ANY.0-0r.ancient": "Reusable generic greeting.",
   "LEAGUEANCIENTS-DIANA.talk.firstVisitEver.0-0.ancient": "First time greeting.",
-  "LEAGUEANCIENTS-DIANA.title": "Diana",
 
+  "LEAGUEANCIENTS-LEONA.title": "Leona",
   "LEAGUEANCIENTS-LEONA.epithet": "",
   "LEAGUEANCIENTS-LEONA.talk.ANY.0-0r.ancient": "Reusable generic greeting.",
   "LEAGUEANCIENTS-LEONA.talk.firstVisitEver.0-0.ancient": "First time greeting.",
-  "LEAGUEANCIENTS-LEONA.title": "Leona"
+  
+  "LEAGUEANCIENTS-TARIC.title": "Taric",
+  "LEAGUEANCIENTS-TARIC.epithet": "",
+  "LEAGUEANCIENTS-TARIC.talk.ANY.0-0r.ancient": "Reusable generic greeting.",
+  "LEAGUEANCIENTS-TARIC.talk.firstVisitEver.0-0.ancient": "First time greeting."
   
   
 }
