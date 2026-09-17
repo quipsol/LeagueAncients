@@ -15,7 +15,6 @@ public static class GameHelper
     /// <returns><c>true</c> if a RunState is active</returns>
     public static bool TryGetRunState([NotNullWhen(true)]out IRunState? state)
     {
-        RunState? statee = new PrivatePropertyWrapper<RunManager, RunState>(RunManager.Instance, "State").Value;
         state = RunManager.Instance?.DebugOnlyGetState() ?? null;
         return state != null;
     }
