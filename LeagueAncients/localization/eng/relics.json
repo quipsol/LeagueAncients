@@ -70,7 +70,7 @@
   "LEAGUEANCIENTS-RING_OF_FRIENDSHIP.description": "For each Player with [gold]Ring of Friendship[/gold], gain [blue]{BaseGoldIncrease:percentMore()}%[/blue] additional [gold]Gold[/gold].",
   "LEAGUEANCIENTS-RING_OF_FRIENDSHIP.flavor": "",
   "LEAGUEANCIENTS-BRAVADO.title": "Bravado",
-  "LEAGUEANCIENTS-BRAVADO.description": "Each turn, after the first time you played 2 [gold]Strike[/gold] in a row, gain {Energy:energyIcons()} and draw [blue]{Cards}[/blue] {Cards:plural:card|cards}.",
+  "LEAGUEANCIENTS-BRAVADO.description": "Every time you play an [red]Attack[/red] after you played a [green]Skill[/green] shuffle [blue]{Cards}[/blue] [gold]Gem[/gold] into your allies hands.",
   "LEAGUEANCIENTS-BRAVADO.flavor": "",
   "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.title": "Sword Of Blossoming Dawn",
   "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.description": "Every {AttackThreshold:plural:Attack|[blue]{}[/blue] Attacks} you play heal your lowest health ally (excluding yourself) by [blue]{Heal}[/blue].",
@@ -84,7 +84,12 @@
   "LEAGUEANCIENTS-SHAREHOLDER.title": "Shareholder",
   "LEAGUEANCIENTS-SHAREHOLDER.description": "Enchant up to [blue]{Cards}[/blue] [red]Attacks[/red] or [green]Skills[/green] with [gold]Shareholder[/gold].",
   "LEAGUEANCIENTS-SHAREHOLDER.flavor": "",
-  
+  "LEAGUEANCIENTS-UNNAMED.title": "Bravado",
+  "LEAGUEANCIENTS-UNNAMED.description": "Each turn, after the first time you play 2 [gold]Strike[/gold] or [gold]Defend[/gold] in a row, EVERYONE gains {Energy:energyIcons()} and draws [blue]{Cards}[/blue] {Cards:plural:card|cards}.",
+  "LEAGUEANCIENTS-UNNAMED.flavor": "",
+
+
+
   "LEAGUEANCIENTS-EMPTY_RELIC.title": "",
   "LEAGUEANCIENTS-EMPTY_RELIC.description": "",
   "LEAGUEANCIENTS-EMPTY_RELIC.flavor": ""

@@ -11,19 +11,18 @@ namespace LeagueAncients.Util;
 
 // Caches to minimize AccessTools usage. Exclusive access to this file.
 // Not inside the structs because typed structs would create a new Dictionary for every <TParent, T> pairing which is terrible.
-// If I access <RunManager, RunState>("State") and <RunManager, RunHistory>("History") it would create two Dictionaries.
-// Even though we don't really care about the "RunState/RunHistory" as they are exclusively used for casting the return value,
-// they are part of the generic structure and would result in two Dictionaries, each holding one entry.
+// Even though we don't really care about the "T" as it is exclusively used for casting the return value,
+// it is part of the generic structure and would result multiple dictionaries even when accessing the same parent class.
 file static class Caches
 {
-    internal static readonly Dictionary<(Type Type, string Name), PropertyInfo> PropetyCache = new();
+    internal static readonly Dictionary<(Type Type, string Name), PropertyInfo> PropertyCache = new();
     internal static readonly Dictionary<(Type Type, string Name), FieldInfo> FieldCache = new();
 }
 
 public  readonly struct  PrivatePropertyWrapper<TParent, T>(TParent parent, string name)
 {
     
-    private readonly PropertyInfo _propertyInfo = Caches.PropetyCache.GetOrCreate(
+    private readonly PropertyInfo _propertyInfo = Caches.PropertyCache.GetOrCreate(
                 (Type: typeof(TParent), Name: name), 
                 key => AccessTools.DeclaredProperty(key.Type, key.Name) 
                        ?? throw new MissingMemberException(key.Type.FullName, key.Name));

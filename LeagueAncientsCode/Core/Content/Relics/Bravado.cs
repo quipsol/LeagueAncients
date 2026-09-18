@@ -1,8 +1,10 @@
-﻿using LeagueAncients.Core.Models;
+﻿using LeagueAncients.Core.Content.Cards;
+using LeagueAncients.Core.Models;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -13,20 +15,9 @@ namespace LeagueAncients.Core.Content.Relics;
 
 public class Bravado : LeagueAncientsRelicModel
 {
-    private const string BASE_GOLD_INCREASE = "BaseGoldIncrease";
-    
     public override RelicRarity Rarity => RelicRarity.Ancient;
     
-    private bool Triggered
-    {
-        get;
-        set
-        {
-            AssertMutable();
-            field = value;
-        }
-    }
-    private bool LastPlayedCardWasStrike
+    private bool LastPlayedCardWasSkill
     {
         get;
         set
@@ -36,33 +27,33 @@ public class Bravado : LeagueAncientsRelicModel
         }
     }
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(2), new CardsVar(1)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips  => [HoverTipFactory.Static(StaticHoverTip.Energy)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips  => [HoverTipFactory.FromCard<Gem>()];
 
     public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (!participants.Contains(Owner.Creature)) return Task.CompletedTask;
-        Triggered = false;
-        LastPlayedCardWasStrike = false;
+        LastPlayedCardWasSkill = false;
         return Task.CompletedTask;
     }
 
-    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    public override Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (cardPlay.Player != Owner || Triggered) return;
-        if (!(cardPlay.Card.Rarity == CardRarity.Basic && cardPlay.Card.Tags.Contains(CardTag.Strike)))
+        if (cardPlay.Card.Type == CardType.Attack && LastPlayedCardWasSkill)
         {
-            LastPlayedCardWasStrike = false;
-            return;
+            Flash();
+            var players = Owner.Creature.CombatState!.GetTeammatesOf(Owner.Creature)
+                        .Where(c => c is { IsPlayer: true, IsAlive: true })
+                        .Select(c => c.Player)
+                        .ToList();
+            for(var i = DynamicVars.Cards.IntValue; i > 0; i--)
+            {
+                var player = Owner.RunState.Rng.CombatTargets.NextItem(players);
+                if (player is null) continue;
+                Owner.Creature.CombatState.CreateCard<Gem>(player);
+            }
         }
-
-        if (LastPlayedCardWasStrike)
-        {
-            Triggered = true;
-            await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
-            await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
-        }
-        else
-            LastPlayedCardWasStrike = true;
+        LastPlayedCardWasSkill = cardPlay.Card.Type == CardType.Skill;
+        return Task.CompletedTask;
     }
 }

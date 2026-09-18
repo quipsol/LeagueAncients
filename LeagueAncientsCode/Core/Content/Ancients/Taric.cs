@@ -24,7 +24,7 @@ public class Taric : LeagueAncientsAncientModel
     public override Color ButtonColor => new Color(0.05f, 0.06f, 0.12f, 0.8f);
     public override Color DialogueColor => new Color("3C1931");
 
-    public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients && GameHelper.GetRunState().IsMultiplayer && Owner.RunState.IsMultiplayer;
+    public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients && GameHelper.GetRunState().IsMultiplayer;
     
     
     public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3, RingOfFriendship];
@@ -36,6 +36,7 @@ public class Taric : LeagueAncientsAncientModel
     ];
     private IEnumerable<EventOption> OptionPool2 => [
                 RelicOption<SwordOfBlossomingDawn>(),
+                RelicOption<Bravado>(),
     ];
     private IEnumerable<EventOption> OptionPool3 => [
                 RelicOption<LocketOfTheIronSolari>(),
@@ -47,12 +48,14 @@ public class Taric : LeagueAncientsAncientModel
     
     protected override IReadOnlyList<EventOption> GenerateInitialEventOptions()
     {
+       
         // TODO: Handle Ring Of Friendship
+        // how to make a deterministic roll?
         return 
         [
                     Rng.NextItem(OptionPool1)!,
                     Rng.NextItem(OptionPool2)!,
-                    Rng.NextItem(OptionPool3)!,
+                    Owner!.RunState.CurrentActIndex == 1 &&  Owner!.RunState.Rng.Niche.NextBool() ? RingOfFriendship : Rng.NextItem(OptionPool3)!,
         ];
     }
 }

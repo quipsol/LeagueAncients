@@ -41,7 +41,7 @@ public static class DictionaryExtensions
         /// Returns the value associated with the given key. <br/>
         /// If the key does not exist, add it with a value calculated from the passed function.
         /// </summary>
-        /// /// <param name="key">The key to look up</param>
+        /// <param name="key">The key to look up</param>
         /// <param name="factory">If the key does not exist yet, this will create the value for the new key</param>
         /// <returns>The value associated with the specified key</returns>
         public TValue GetOrCreate(TKey key, Func<TKey, TValue> factory)
