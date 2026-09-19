@@ -88,7 +88,13 @@
   "LEAGUEANCIENTS-UNNAMED.description": "Each turn, after the first time you play 2 [gold]Strike[/gold] or [gold]Defend[/gold] in a row, EVERYONE gains {Energy:energyIcons()} and draws [blue]{Cards}[/blue] {Cards:plural:card|cards}.",
   "LEAGUEANCIENTS-UNNAMED.flavor": "",
 
-
+  "LEAGUEANCIENTS-SISTER_OF_THE_SUN.title": "Sister of the Sun",
+  "LEAGUEANCIENTS-SISTER_OF_THE_SUN.description": "Gain {Energy:energyIcons()} at the start of your even turns.",
+  "LEAGUEANCIENTS-SISTER_OF_THE_SUN.flavor": "",
+  
+  "LEAGUEANCIENTS-SISTER_OF_THE_MOON.title": "Sister of the Moon",
+  "LEAGUEANCIENTS-SISTER_OF_THE_MOON.description": "Gain {Energy:energyIcons()} at the start of your odd turns.",
+  "LEAGUEANCIENTS-SISTER_OF_THE_MOON.flavor": "",
 
   "LEAGUEANCIENTS-EMPTY_RELIC.title": "",
   "LEAGUEANCIENTS-EMPTY_RELIC.description": "",

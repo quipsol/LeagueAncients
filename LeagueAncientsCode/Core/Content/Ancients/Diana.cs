@@ -40,13 +40,13 @@ public class Diana : LeagueAncientsAncientModel
     public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3];
     
     private IEnumerable<EventOption> OptionPool1 => [
-
+                RelicOption<SisterOfTheMoon>(),
     ];
     private IEnumerable<EventOption> OptionPool2 => [
-
+                RelicOption<SisterOfTheSun>(),
     ];
     private IEnumerable<EventOption> OptionPool3 => [
-
+                RelicOption<SisterOfTheSun>(),
     ];
     
     protected override IReadOnlyList<EventOption> GenerateInitialEventOptions()
