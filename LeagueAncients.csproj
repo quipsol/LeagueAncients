@@ -35,6 +35,8 @@
         <None Include=".gitignore"/>
         
         <Compile Include="LeagueAncientsCode/**/*.cs"/>
+        
+        <Folder Include="LeagueAncientsCode\Core\Content\Relics\Zoe\" />
 
         <!-- Empty folders -->
         <Folder Include="LeagueAncients\images\events\" />

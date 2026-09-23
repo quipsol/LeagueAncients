@@ -11,5 +11,6 @@ public enum LogTopic
     GameState = 1 << 4,
     Network = 1 << 5,
     Model = 1 << 6,
+    Logic = 1 << 7,
     All = ~0
 }

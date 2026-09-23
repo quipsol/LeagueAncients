@@ -1,11 +1,83 @@
-﻿[gd_scene format=3 ]
+[gd_scene load_steps=12 format=3 ]
+
+[ext_resource type="Texture2D" path="res://LeagueAncients/images/ancients/leona_splashart.jpg" id="1_3s3yo"]
+[ext_resource type="Shader" path="res://LeagueAncients/shaders/vfx/vfx_water_reflection_post.gdshader" id="2_ne5wu"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/vfx/circle_gradient.png" id="3_ajgap"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/vfx/pillar_wide_gradient.png" id="3_yqekw"]
+[ext_resource type="Texture2D" path="res://LeagueAncients/images/placeholder/100_100/white.png" id="4_yqekw"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mhpsa"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ws0we"]
+noise = SubResource("FastNoiseLite_mhpsa")
+seamless = true
+normalize = false
+seamless_blend_skirt = 0.293
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhpsa"]
+shader = ExtResource("2_ne5wu")
+shader_parameter/noise = SubResource("NoiseTexture2D_ws0we")
+shader_parameter/mask = ExtResource("3_yqekw")
+shader_parameter/speed = 0.03000000142499
+shader_parameter/strength = 0.01000000047499
+shader_parameter/direction = Vector2(0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w0x66"]
+shader = ExtResource("2_ne5wu")
+shader_parameter/noise = SubResource("NoiseTexture2D_ws0we")
+shader_parameter/mask = ExtResource("3_ajgap")
+shader_parameter/speed = 0.03000000142499
+shader_parameter/strength = 0.02000000094999
+shader_parameter/direction = Vector2(1, 1)
+
+[sub_resource type="Curve" id="Curve_g7cbi"]
+_data = [Vector2(0, 0.4), 0.0, 0.0, 0, 0, Vector2(0.5, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 0.4), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_pi5a6"]
+offsets = PackedFloat32Array(0, 0.412, 0.992)
+colors = PackedColorArray(0.34901962, 0.34901962, 0.34901962, 1, 1, 1, 1, 1, 0.34901962, 0.34901962, 0.34901962, 1)
 
 [node name="Leona" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 128.0
-offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -186.0
+offset_top = -35.0
+offset_right = 2135.5752
+offset_bottom = 1380.0
+texture = ExtResource("1_3s3yo")
+
+[node name="Hair" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mhpsa")
+position = Vector2(980.00006, 434.9999)
+rotation = 0.92026466
+scale = Vector2(4.2678432, 5.6627297)
+texture = ExtResource("4_yqekw")
+
+[node name="Aurora Borealis" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_w0x66")
+position = Vector2(95.99997, 112.00001)
+scale = Vector2(17.050358, 19.351725)
+texture = ExtResource("4_yqekw")
+
+[node name="Shield Glow" type="CPUParticles2D" parent="."]
+position = Vector2(1811, 289)
+scale = Vector2(2.8914437, 4.189404)
+amount = 2
+texture = ExtResource("3_ajgap")
+lifetime = 5.0
+local_coords = true
+spread = 20.0
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_g7cbi")
+color = Color(0.87, 0.84970003, 0.261, 0.4862745)
+color_ramp = SubResource("Gradient_pi5a6")

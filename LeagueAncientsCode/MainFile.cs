@@ -28,6 +28,9 @@ public partial class MainFile : Node
         Harmony harmony = new(MOD_ID);
         harmony.PatchAll();
         
+        ModLog.Warn("This is a warning", LogTopic.Network | LogTopic.Audio);
+        ModLog.Error("This is an error", LogTopic.All);
+        
         ModLog.Info("Init complete");
         
     }

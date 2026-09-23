@@ -12,6 +12,9 @@
   "LEAGUEANCIENTS-COSMIC_RADIANCE_POWER.title": "Cosmic Radiance",
   "LEAGUEANCIENTS-COSMIC_RADIANCE_POWER.description": "At the beginning of your turn, give ALL allies [blue]1[/blue] [gold]Intangible[/gold].",
   "LEAGUEANCIENTS-COSMIC_RADIANCE_POWER.smartDescription": "At the beginning of your turn, give ALL allies [blue]{IntangiblePower:diff()}[/blue] [gold]Intangible[/gold].",
+  "LEAGUEANCIENTS-BURDEN_POWER.title": "Burden",
+  "LEAGUEANCIENTS-BURDEN_POWER.description": "Take increased attack damage.",
+  "LEAGUEANCIENTS-BURDEN_POWER.smartDescription": "You take {Amount} times attack damage this turn.",
   
   "LEAGUEANCIENTS-TEST_POWER.title": "Test Power",
   "LEAGUEANCIENTS-TEST_POWER.description": "TEST",

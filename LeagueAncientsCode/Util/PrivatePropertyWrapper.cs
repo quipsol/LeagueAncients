@@ -6,7 +6,7 @@ namespace LeagueAncients.Util;
 
 
 // Based on Pikcube's versions:
-// https://github.com/pikcube/Pikcube.Common/blob/master/Utility/PrivateWrapper.cs
+// https://github.com/pikcube/Pikcube.Common/blob/d35267eb5beb5f92dc6fc0ed5b62a5f3fd381395/Utility/PrivateWrapper.cs
 
 
 // Caches to minimize AccessTools usage. Exclusive access to this file.
@@ -19,6 +19,13 @@ file static class Caches
     internal static readonly Dictionary<(Type Type, string Name), FieldInfo> FieldCache = new();
 }
 
+/// <summary>
+/// A simple-to-use wrapper for accessing private properties.
+/// </summary>
+/// <param name="parent">The object instance (if the property isn't static).</param>
+/// <param name="name">The property's name.</param>
+/// /// <typeparam name="TParent">The type of the class where the property is defined.</typeparam>
+/// <typeparam name="T">The type of the property.</typeparam>
 public  readonly struct  PrivatePropertyWrapper<TParent, T>(TParent parent, string name)
 {
     
@@ -35,6 +42,13 @@ public  readonly struct  PrivatePropertyWrapper<TParent, T>(TParent parent, stri
     }
 }
 
+/// <summary>
+/// A simple-to-use wrapper for accessing private fields.
+/// </summary>
+/// <param name="parent">The object instance (if the field isn't static).</param>
+/// <param name="name">The field's name.</param>
+/// /// <typeparam name="TParent">The type of the class where the field is defined.</typeparam>
+/// <typeparam name="T">The type of the field.</typeparam>
 public readonly struct PrivateFieldWrapper<TParent, T>(TParent? parent, string name)
 {
     private readonly FieldInfo _fieldInfo  = Caches.FieldCache.GetOrCreate(

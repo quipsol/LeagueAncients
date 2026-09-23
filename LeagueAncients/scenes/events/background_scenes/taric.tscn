@@ -1,4 +1,6 @@
-﻿[gd_scene format=3 ]
+[gd_scene load_steps=2 format=3 ]
+
+[ext_resource type="Texture2D" path="res://LeagueAncients/images/ancients/taric_splashart.jpg" id="1_yp845"]
 
 [node name="Taric" type="Control"]
 layout_mode = 3
@@ -9,3 +11,11 @@ offset_right = 128.0
 offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -125.0
+offset_top = -34.0
+offset_right = 2089.7908
+offset_bottom = 1273.0
+texture = ExtResource("1_yp845")

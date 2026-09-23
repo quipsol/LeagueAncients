@@ -14,7 +14,7 @@ public class ConsolePrintLog : IPrintLog
     {
         skipFrames++;
         var logLevelText = $"{logLevel.ToString().ToUpperInvariant()}";
-        var callerName = $"[Caller: {Path.GetFileNameWithoutExtension(callerFilePath)}.{callerMemberName}]";
+        var callerName = $"[{Path.GetFileNameWithoutExtension(callerFilePath)}.{callerMemberName}]";
         var fullContextText = (context != null ? $"[{context}] " : "") + $"[{logTopic.ToString()}] {callerName}";
         
         var message = (fullContextText + text).Length > 200 

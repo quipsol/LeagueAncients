@@ -87,7 +87,11 @@
   "LEAGUEANCIENTS-UNNAMED.title": "Bravado",
   "LEAGUEANCIENTS-UNNAMED.description": "Each turn, after the first time you play 2 [gold]Strike[/gold] or [gold]Defend[/gold] in a row, EVERYONE gains {Energy:energyIcons()} and draws [blue]{Cards}[/blue] {Cards:plural:card|cards}.",
   "LEAGUEANCIENTS-UNNAMED.flavor": "",
-
+  "LEAGUEANCIENTS-BURDEN.title": "Burden",
+  "LEAGUEANCIENTS-BURDEN.description": "Upon pickup, add [blue]1[/blue] [gold]Burden[/gold] into your deck.",
+  "LEAGUEANCIENTS-BURDEN.flavor": "",
+  
+  
   "LEAGUEANCIENTS-SISTER_OF_THE_SUN.title": "Sister of the Sun",
   "LEAGUEANCIENTS-SISTER_OF_THE_SUN.description": "Gain {Energy:energyIcons()} at the start of your even turns.",
   "LEAGUEANCIENTS-SISTER_OF_THE_SUN.flavor": "",
