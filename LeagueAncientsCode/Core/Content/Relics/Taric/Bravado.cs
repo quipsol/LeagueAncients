@@ -13,7 +13,9 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// If you play an attack after a skill, give a random ally a Gem (energy and draw)
+/// </summary>
 public class Bravado : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;
@@ -50,7 +52,8 @@ public class Bravado : LeagueAncientsRelicModel
             for(var i = DynamicVars.Cards.IntValue; i > 0; i--)
             {
                 var player = Owner.RunState.Rng.CombatTargets.NextItem(players);
-                if (player is null) continue;
+                if (player is null) break; // only null if none exist, no reason to continue
+                // Does this even give the player the card?
                 Owner.Creature.CombatState.CreateCard<Gem>(player);
             }
         }

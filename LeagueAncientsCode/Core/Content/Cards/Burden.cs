@@ -11,14 +11,14 @@ using MegaCrit.Sts2.Core.Models.Powers;
 namespace LeagueAncients.Core.Content.Cards;
 
 
-public class Burden() : LeagueAncientsCardModel(1, CardType.Skill, CardRarity.Ancient, TargetType.AllAllies)
+public class Burden() : LeagueAncientsCardModel(0, CardType.Skill, CardRarity.Ancient, TargetType.AllAllies)
 {
     // public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
     // public override string PortraitPath => null!;// "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
     // public override string? CustomPortraitPath => null;// "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<IntangiblePower>(1), new PowerVar<BurdenPower>(3)];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain, CardKeyword.Exhaust];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<IntangiblePower>()];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

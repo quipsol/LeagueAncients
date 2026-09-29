@@ -8,6 +8,9 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// Gain Energy in Odd turns
+/// </summary>
 public class SisterOfTheMoon : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;

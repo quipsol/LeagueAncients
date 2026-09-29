@@ -6,7 +6,9 @@ using MegaCrit.Sts2.Core.HoverTips;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Get a card: Next turn ALL allies gain Intangible
+/// </summary>
 public class CosmicRadiance : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;

@@ -46,6 +46,7 @@ public class Morgana : LeagueAncientsAncientModel
     ];
     private IEnumerable<EventOption> OptionPool3 => [
                 RelicOption<SoulShacklesRelic>(),
+                RelicOption<DesperateBargain>(),
     ];
     
     protected override IReadOnlyList<EventOption> GenerateInitialEventOptions()
@@ -54,9 +55,14 @@ public class Morgana : LeagueAncientsAncientModel
         var secondOption = Rng.NextItem(OptionPool2)!;
         var thirdOption = Rng.NextItem(OptionPool3)!;
 
-        if (thirdOption.Relic is SoulShacklesRelic soulShacklesRelic)
+        switch (thirdOption.Relic)
         {
-            soulShacklesRelic.SetRewardRelics([firstOption.Relic, secondOption.Relic]);
+            case SoulShacklesRelic soulShacklesRelic:
+                soulShacklesRelic.SetRewardRelics([firstOption.Relic, secondOption.Relic]);
+                break;
+            case DesperateBargain desperateBargain:
+                desperateBargain.SetRewardRelics([firstOption.Relic, secondOption.Relic]);
+                break;
         }
         
         return 

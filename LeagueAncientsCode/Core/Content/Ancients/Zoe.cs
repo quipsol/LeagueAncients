@@ -54,7 +54,9 @@ public class Zoe : LeagueAncientsAncientModel
     
     //public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients && act.Index is 1 or 2;
     // Force Zoe to be Act 3 until we have actual Act 3 ancients
-    public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients  && act.Index == 2;
+    
+    // Index == 0 => disabled
+    public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients  && act.Index == 0;
 
 
     

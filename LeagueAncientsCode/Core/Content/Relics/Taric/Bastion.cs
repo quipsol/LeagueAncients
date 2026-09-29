@@ -6,13 +6,15 @@ using MegaCrit.Sts2.Core.HoverTips;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
-public class LocketOfTheIronSolari : LeagueAncientsRelicModel
+/// <summary>
+/// Get a card: ALL allies gain Block
+/// </summary>
+public class Bastion : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;
     public override bool HasUponPickupEffect => true;
-    protected override IEnumerable<IHoverTip> ExtraHoverTips  => HoverTipFactory.FromCardWithCardHoverTips<Cards.LocketOfTheIronSolari>();
+    protected override IEnumerable<IHoverTip> ExtraHoverTips  => HoverTipFactory.FromCardWithCardHoverTips<Cards.Bastion>();
 
     public override async Task AfterObtained()
-        => CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(Owner.RunState.CreateCard<Cards.LocketOfTheIronSolari>(Owner), PileType.Deck), 2f);
+        => CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(Owner.RunState.CreateCard<Cards.Bastion>(Owner), PileType.Deck), 2f);
 }

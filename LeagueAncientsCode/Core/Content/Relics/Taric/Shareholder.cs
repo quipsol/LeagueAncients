@@ -14,7 +14,9 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Enchant a few cards. After they are played, they are shuffled into your teammates combat deck, and have reduced cost.
+/// </summary>
 public class Shareholder : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;

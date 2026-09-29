@@ -1,10 +1,12 @@
 using System.Reflection;
 using BaseLib.Config;
+using BaseLib.Patches.Saves;
 using Godot;
 using HarmonyLib;
 using LeagueAncients.Core.Multiplayer;
 using LeagueAncients.Logging;
 using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Saves.Runs;
 
 namespace LeagueAncients;
 
@@ -28,6 +30,8 @@ public partial class MainFile : Node
         Harmony harmony = new(MOD_ID);
         harmony.PatchAll();
         
+        ModLog.Info("Adding SavedProperty support for List<SerializableRelic> through BaseLib.");
+        ExtendedSaveTypes.RegisterListSaveType<SerializableRelic>();
         ModLog.Warn("This is a warning", LogTopic.Network | LogTopic.Audio);
         ModLog.Error("This is an error", LogTopic.All);
         

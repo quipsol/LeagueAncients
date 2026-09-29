@@ -12,7 +12,9 @@ using MegaCrit.Sts2.Core.Rooms;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// If you end your turn with Energy left, all your allies gain extra Energy in the next turn.
+/// </summary>
 public class Endowment : LeagueAncientsRelicModel
 {
     private const string LEFTOVER_ENERGY = "LeftoverEnergy";

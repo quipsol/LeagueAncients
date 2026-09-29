@@ -43,10 +43,10 @@ public class Diana : LeagueAncientsAncientModel
                 RelicOption<SisterOfTheMoon>(),
     ];
     private IEnumerable<EventOption> OptionPool2 => [
-                RelicOption<SisterOfTheSun>(),
+                RelicOption<PaleCascade>(),
     ];
     private IEnumerable<EventOption> OptionPool3 => [
-                RelicOption<SisterOfTheSun>(),
+                RelicOption<MoonSilver>(),
     ];
     
     protected override IReadOnlyList<EventOption> GenerateInitialEventOptions()

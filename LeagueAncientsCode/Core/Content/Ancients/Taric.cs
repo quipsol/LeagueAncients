@@ -25,10 +25,10 @@ public class Taric : LeagueAncientsAncientModel
     public override bool IsValidForAct(ActModel act) => !RunConfigSnapshot.Active.DisableLeagueAncients && GameHelper.GetRunState().IsMultiplayer;
     
     
-    public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3, RingOfFriendship];
+    public override IEnumerable<EventOption> AllPossibleEventOptions => [..OptionPool1, ..OptionPool2, ..OptionPool3, RingOfFriendship, Endowment];
 
     private IEnumerable<EventOption> OptionPool1 => [
-                RelicOption<CosmicRadiance>(),
+                RelicOption<Burden>(),
                 RelicOption<Shareholder>(),
     ];
     private IEnumerable<EventOption> OptionPool2 => [
@@ -36,7 +36,8 @@ public class Taric : LeagueAncientsAncientModel
                 RelicOption<Bravado>(),
     ];
     private IEnumerable<EventOption> OptionPool3 => [
-                RelicOption<LocketOfTheIronSolari>(),
+                RelicOption<Bastion>(),
+                
     ];
 
     /// Either offered to ALL or NONE
@@ -59,7 +60,8 @@ public class Taric : LeagueAncientsAncientModel
         [
                     Rng.NextItem(OptionPool1)!,
                     Rng.NextItem(pool2)!,
-                    Owner!.RunState.CurrentActIndex == 1 &&  nicheRng.NextBool() ? RingOfFriendship : Rng.NextItem(OptionPool3)!,
+                    // currently either everyone or no one. Might prefer more of a ~75% chance per person.
+                    Owner!.RunState.CurrentActIndex == 1 && nicheRng.NextBool() ? RingOfFriendship : Rng.NextItem(OptionPool3)!,
         ];
     }
 }

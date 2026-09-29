@@ -11,6 +11,9 @@ using MegaCrit.Sts2.Core.Rooms;
 
 namespace LeagueAncients.Core.Content.Relics;
 
+/// <summary>
+/// Gain Energy in Even turns
+/// </summary>
 public class SisterOfTheSun : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;

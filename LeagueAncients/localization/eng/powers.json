@@ -15,6 +15,14 @@
   "LEAGUEANCIENTS-BURDEN_POWER.title": "Burden",
   "LEAGUEANCIENTS-BURDEN_POWER.description": "Take increased attack damage.",
   "LEAGUEANCIENTS-BURDEN_POWER.smartDescription": "You take {Amount} times attack damage this turn.",
+
+  "LEAGUEANCIENTS-ECLIPSE_POWER.title": "Eclipse",
+  "LEAGUEANCIENTS-ECLIPSE_POWER.description": "Lose [gold]Dexterity[/gold] at the end of your turn.",
+  "LEAGUEANCIENTS-ECLIPSE_POWER.smartDescription": "Lose [blue]1[/blue] [gold]Dexterity[/gold] at the end of your turn.\nAt the end of your turn, reduce this Power by [blue]1[/blue].",
+  
+  "LEAGUEANCIENTS-PALE_CASCADE_POWER.title": "Pale Cascade",
+  "LEAGUEANCIENTS-PALE_CASCADE_POWER.description": "Gain Block at the start of your next turn.",
+  "LEAGUEANCIENTS-PALE_CASCADE_POWER.smartDescription": "At the start of your turn, gain {Amount} [gold]Block[/gold].",
   
   "LEAGUEANCIENTS-TEST_POWER.title": "Test Power",
   "LEAGUEANCIENTS-TEST_POWER.description": "TEST",

@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace LeagueAncients.Core.Content.Cards;
 
 
-public class LocketOfTheIronSolari() : LeagueAncientsCardModel(1, CardType.Skill, CardRarity.Ancient, TargetType.AllAllies)
+public class Bastion() : LeagueAncientsCardModel(1, CardType.Skill, CardRarity.Ancient, TargetType.AllAllies)
 {
     // public override string BetaPortraitPath => "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";
     // public override string PortraitPath => null!;// "res://LeagueAncients/images/card_portraits/colorless_ancient_placeholder.png";

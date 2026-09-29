@@ -1,15 +1,12 @@
-﻿using BaseLib.Abstracts;
+﻿using LeagueAncients.Core.Models;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 
 namespace LeagueAncients.Core.Content.Enchantments;
 
-public class Shareholder : CustomEnchantmentModel
+public class Shareholder : LeagueAncientsEnchantmentModel
 {
-    protected override string CustomIconPath => "res://LeagueAncients/images/placeholder/100_100/blue.png";
-    public override bool HasExtraCardText => false;
-    public override bool ShowAmount => false;
     public override bool CanEnchant(CardModel card) => card.Type is CardType.Attack or CardType.Skill && !card.Keywords.Contains(CardKeyword.Exhaust);
     protected override void OnEnchant() { }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];

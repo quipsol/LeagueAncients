@@ -11,13 +11,15 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Get a card: your allies gain 1 Intangible, you take increased damage.
+/// </summary>
 public class Burden : LeagueAncientsRelicModel
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;
     public override bool HasUponPickupEffect => true;
-    protected override IEnumerable<IHoverTip> ExtraHoverTips  => HoverTipFactory.FromCardWithCardHoverTips<Cards.LocketOfTheIronSolari>();
+    protected override IEnumerable<IHoverTip> ExtraHoverTips  => HoverTipFactory.FromCardWithCardHoverTips<Cards.Burden>();
 
     public override async Task AfterObtained()
-        => CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(Owner.RunState.CreateCard<Cards.LocketOfTheIronSolari>(Owner), PileType.Deck), 2f);
+        => CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(Owner.RunState.CreateCard<Cards.Burden>(Owner), PileType.Deck), 2f);
 }

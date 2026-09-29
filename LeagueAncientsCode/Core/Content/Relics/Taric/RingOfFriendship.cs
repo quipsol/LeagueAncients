@@ -10,7 +10,9 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Increase gold rewards, based on RingOfFriendships owned by players
+/// </summary>
 public class RingOfFriendship : LeagueAncientsRelicModel
 {
     private const string BASE_GOLD_INCREASE = "BaseGoldIncrease";

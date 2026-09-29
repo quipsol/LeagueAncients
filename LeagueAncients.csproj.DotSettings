@@ -5,4 +5,5 @@
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=leagueancientscode_005Ccore_005Ccontent_005Crelics_005Cleona/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=leagueancientscode_005Ccore_005Ccontent_005Crelics_005Cmorgana/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=leagueancientscode_005Ccore_005Ccontent_005Crelics_005Ctaric/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=leagueancientscode_005Ccore_005Ccontent_005Crelics_005Czoe/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=leagueancientscode_005Ccore_005Ccontent_005Crelics_005Czoe/@EntryIndexedValue">True</s:Boolean>
+</wpf:ResourceDictionary>

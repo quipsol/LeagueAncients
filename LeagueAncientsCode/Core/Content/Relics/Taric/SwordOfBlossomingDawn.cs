@@ -10,7 +10,9 @@ using MegaCrit.Sts2.Core.Saves.Runs;
 
 namespace LeagueAncients.Core.Content.Relics;
 
-
+/// <summary>
+/// Every some attacks, heal an ally (excluding yourself)
+/// </summary>
 public class SwordOfBlossomingDawn : LeagueAncientsRelicModel
 {
     private const string ATTACK_THRESHOLD = "AttackThreshold";

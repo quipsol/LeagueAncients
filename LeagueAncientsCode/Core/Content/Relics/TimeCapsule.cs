@@ -32,10 +32,7 @@ public class TimeCapsule() : LeagueAncientsRelicModel
     [SavedProperty]
     public List<SerializableCard> SerializableCards
     {
-        get
-        {
-            return _serializableCards;
-        }
+        get => _serializableCards;
         private set
         {
             AssertMutable();

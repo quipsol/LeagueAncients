@@ -62,7 +62,11 @@
   "LEAGUEANCIENTS-NADIR.title": "Nadir",
   "LEAGUEANCIENTS-NADIR.description": "While you are at or below {Threshold}%{HasOwner: ({CalculatedThreshold})|} health, gain [blue]{StrengthPower:diff()}[/blue] [gold]Strength[/gold] and [blue]{DexterityPower:diff()}[/blue] [gold]Dexterity[/gold].",
   "LEAGUEANCIENTS-NADIR.flavor": "",
-
+  "LEAGUEANCIENTS-DESPERATE_BARGAIN.title": "Desperate Bargain",
+  "LEAGUEANCIENTS-DESPERATE_BARGAIN.description": "Upon reaching the final Rest Site of the Act, gain the other two Relics offered by Morgana.{RelicTitles.StringValue:cond:\\n\\nCards in Stasis:\\n{}|}",
+  "LEAGUEANCIENTS-DESPERATE_BARGAIN.flavor": "",
+  
+  
   "LEAGUEANCIENTS-ENDOWMENT.title": "Endowment",
   "LEAGUEANCIENTS-ENDOWMENT.description": "If you end your turn with unspent {LeftoverEnergy:energyIcons()}, grant all other allies {GrantedEnergy:energyIcons()} at the start of their next turn.",
   "LEAGUEANCIENTS-ENDOWMENT.flavor": "",
@@ -75,9 +79,9 @@
   "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.title": "Sword Of Blossoming Dawn",
   "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.description": "Every {AttackThreshold:plural:Attack|[blue]{}[/blue] Attacks} you play heal your lowest health ally (excluding yourself) by [blue]{Heal}[/blue].",
   "LEAGUEANCIENTS-SWORD_OF_BLOSSOMING_DAWN.flavor": "",
-  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.title": "Locket of the Iron Solari",
-  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.description": "Upon pickup, add [blue]1[/blue] [gold]Locket of the Iron Solari[/gold] into your deck.",
-  "LEAGUEANCIENTS-LOCKET_OF_THE_IRON_SOLARI.flavor": "",
+  "LEAGUEANCIENTS-BASTION.title": "Locket of the Iron Solari",
+  "LEAGUEANCIENTS-BASTION.description": "Upon pickup, add [blue]1[/blue] [gold]Locket of the Iron Solari[/gold] into your deck.",
+  "LEAGUEANCIENTS-BASTION.flavor": "",
   "LEAGUEANCIENTS-COSMIC_RADIANCE.title": "Cosmic Radiance",
   "LEAGUEANCIENTS-COSMIC_RADIANCE.description": "Upon pickup, add [blue]1[/blue] [gold]Cosmic Radiance[/gold] into your deck.",
   "LEAGUEANCIENTS-COSMIC_RADIANCE.flavor": "",
@@ -95,11 +99,21 @@
   "LEAGUEANCIENTS-SISTER_OF_THE_SUN.title": "Sister of the Sun",
   "LEAGUEANCIENTS-SISTER_OF_THE_SUN.description": "Gain {Energy:energyIcons()} at the start of your even turns.",
   "LEAGUEANCIENTS-SISTER_OF_THE_SUN.flavor": "",
+  "LEAGUEANCIENTS-ECLIPSE.title": "Eclipse",
+  "LEAGUEANCIENTS-ECLIPSE.description": "At combat start, gain [blue]{DexterityPower:diff()}[/blue] [gold]Dexterity[/gold]. At the end of your first {DexterityPower:diff()} turns, lose [blue]1[/blue] [gold]Dexterity[/gold].",
+  "LEAGUEANCIENTS-ECLIPSE.flavor": "",
+  
   
   "LEAGUEANCIENTS-SISTER_OF_THE_MOON.title": "Sister of the Moon",
   "LEAGUEANCIENTS-SISTER_OF_THE_MOON.description": "Gain {Energy:energyIcons()} at the start of your odd turns.",
   "LEAGUEANCIENTS-SISTER_OF_THE_MOON.flavor": "",
-
+  "LEAGUEANCIENTS-MOON_SILVER.title": "Moon Silver",
+  "LEAGUEANCIENTS-MOON_SILVER.description": "After playing a Skill, gain {VigorPower:diff()} [gold]Vigor[/gold].",
+  "LEAGUEANCIENTS-MOON_SILVER.flavor": "",
+  "LEAGUEANCIENTS-PALE_CASCADE.title": "Pale Cascade",
+  "LEAGUEANCIENTS-PALE_CASCADE.description": "The first {Triggers:plural:time|{} times} each combat you take attack damage, gain {PaleCascadePower:diff()} [gold]Block[/gold] at the start of your next turn.",
+  "LEAGUEANCIENTS-PALE_CASCADE.flavor": "",
+  
   "LEAGUEANCIENTS-EMPTY_RELIC.title": "",
   "LEAGUEANCIENTS-EMPTY_RELIC.description": "",
   "LEAGUEANCIENTS-EMPTY_RELIC.flavor": ""
